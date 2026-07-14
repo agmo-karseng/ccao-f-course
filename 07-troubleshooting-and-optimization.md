@@ -283,21 +283,57 @@ Budget-wise: at 10% weight this domain is worth roughly 6 of 60 items — enough
 
 ### Answers
 
-**Q1 — B.** Generic output is the classic symptom of a context-starved prompt. Official guidance for unhelpful answers is to explain the ask clearly and include as much context as possible, as if briefing someone with no background knowledge. A model upgrade (A) doesn't supply missing context; asking why (C) doesn't fix the input; thumbs-down (D) is product feedback, not a resolution.
+**Q1 — Correct: B**
 
-**Q2 — C.** Wrong-format failures are resolved by making the format specification explicit, prominent, and structurally separated from other content — and examples are one of the most effective ways to show the desired output shape. Blind retries (A), changing file type (B), or deleting useful context (D) don't address the cause.
+- **Why B:** Generic output is the classic symptom of a context-starved prompt. Official guidance for unhelpful answers is to explain the ask clearly and include as much context as possible, as if briefing someone with no background knowledge.
+- **Why not A:** A model upgrade doesn't supply missing context.
+- **Why not C:** Asking why doesn't fix the input.
+- **Why not D:** Thumbs-down is product feedback, not a resolution.
 
-**Q3 — B.** Claude can produce citations and quotes that look authoritative but are not grounded in fact; an unfindable source is a hallucination red flag. The remedy is verification plus grounding: restrict Claude to user-provided sources and require support for claims. Self-confirmation (C) and confident rewording (D) are not validation; citing unverified material (A) compounds the error.
+**Q2 — Correct: C**
 
-**Q4 — B.** Partially followed instructions on a multi-part request point to task overload; the documented fix is breaking complex requests into substeps (decomposition/chaining) so each part gets full attention. Emphasis phrases (A) and reordering (C) don't reduce the load; merging two inconsistent outputs (D) creates new problems.
+- **Why C:** Wrong-format failures are resolved by making the format specification explicit, prominent, and structurally separated from other content — and examples are one of the most effective ways to show the desired output shape.
+- **Why not A/B/D:** Blind retries, changing file type, or deleting useful context don't address the cause.
 
-**Q5 — B.** Long, cluttered conversation state — stale instructions and rejected directions still in context — degrades output relevance. Summarizing what still matters and restarting cleanly preserves progress while removing interference. A and C leave the clutter in place; D abandons a solvable problem.
+**Q3 — Correct: B**
 
-**Q6 — A and C.** Recurring re-explanation of the same context is the signal for a structural fix: a Project makes shared instructions and knowledge persistent, and a tested template makes per-ticket prompting fast and consistent. Forcing the top model everywhere (B) ignores the cost/speed/quality balance for routine drafts; banning iteration (D) removes a documented improvement mechanism; ratings (E) don't standardize inputs.
+- **Why B:** Claude can produce citations and quotes that look authoritative but are not grounded in fact; an unfindable source is a hallucination red flag. The remedy is verification plus grounding: restrict Claude to user-provided sources and require support for claims.
+- **Why not A:** Citing unverified material compounds the error.
+- **Why not C:** Self-confirmation is not validation.
+- **Why not D:** Confident rewording is not validation.
 
-**Q7 — C.** Iteration only compounds if lessons are captured: fold the successful corrections back into the reusable prompt or the Project instructions. Separate chats don't automatically inherit one conversation's corrections (B); an ever-growing thread invites long-conversation degradation (A); reverting to the weak draft (D) discards the improvement.
+**Q4 — Correct: B**
 
-**Q8 — B.** Anthropic's prompt-engineering guidance states that not every problem is best solved by prompt engineering — latency and cost can often be more easily improved by selecting a different model. Since quality is already sufficient, matching a faster, lower-cost model to the straightforward task is the right optimization. A fights the wrong lever; C sacrifices effectiveness; D adds overhead without addressing cost or speed.
+- **Why B:** Partially followed instructions on a multi-part request point to task overload; the documented fix is breaking complex requests into substeps (decomposition/chaining) so each part gets full attention.
+- **Why not A/C:** Emphasis phrases and reordering don't reduce the load.
+- **Why not D:** Merging two inconsistent outputs creates new problems.
+
+**Q5 — Correct: B**
+
+- **Why B:** Long, cluttered conversation state — stale instructions and rejected directions still in context — degrades output relevance. Summarizing what still matters and restarting cleanly preserves progress while removing interference.
+- **Why not A/C:** Leave the clutter in place.
+- **Why not D:** Abandons a solvable problem.
+
+**Q6 — Correct: A and C**
+
+- **Why A and C:** Recurring re-explanation of the same context is the signal for a structural fix: a Project makes shared instructions and knowledge persistent, and a tested template makes per-ticket prompting fast and consistent.
+- **Why not B:** Forcing the top model everywhere ignores the cost/speed/quality balance for routine drafts.
+- **Why not D:** Banning iteration removes a documented improvement mechanism.
+- **Why not E:** Ratings don't standardize inputs.
+
+**Q7 — Correct: C**
+
+- **Why C:** Iteration only compounds if lessons are captured: fold the successful corrections back into the reusable prompt or the Project instructions.
+- **Why not A:** An ever-growing thread invites long-conversation degradation.
+- **Why not B:** Separate chats don't automatically inherit one conversation's corrections.
+- **Why not D:** Reverting to the weak draft discards the improvement.
+
+**Q8 — Correct: B**
+
+- **Why B:** Anthropic's prompt-engineering guidance states that not every problem is best solved by prompt engineering — latency and cost can often be more easily improved by selecting a different model. Since quality is already sufficient, matching a faster, lower-cost model to the straightforward task is the right optimization.
+- **Why not A:** Fights the wrong lever.
+- **Why not C:** Sacrifices effectiveness.
+- **Why not D:** Adds overhead without addressing cost or speed.
 
 ---
 

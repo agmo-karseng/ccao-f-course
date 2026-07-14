@@ -577,54 +577,54 @@ context from one chat does not carry over to other chats in the project.
 
 ### Answers
 
-**Q1 — B.** Anthropic's help documentation states Claude will not have access to the
-project name and description; those fields are for human organization. Behavioral rules
-belong in project instructions (applied to all chats in the project) or, if lengthy
-reference material, in project knowledge. A and C are invented mechanics; D is false —
-storing instructions is exactly what projects do.
+**Q1 — Correct: B**
 
-**Q2 — C.** Stable, reusable reference material (brand guide, glossary) belongs in
-project knowledge; disposable weekly input stays a single-chat upload; instructions
-define behavior and point at the knowledge files. A confuses instructions with
-knowledge; B churns the knowledge base with one-off content; D forfeits the persistence
-benefit projects exist to provide.
+- **Why B:** Anthropic's help documentation states Claude will not have access to the project name and description; those fields are for human organization. Behavioral rules belong in project instructions (applied to all chats in the project) or, if lengthy reference material, in project knowledge.
+- **Why not A/C:** Invented mechanics.
+- **Why not D:** False — storing instructions is exactly what projects do.
 
-**Q3 — C.** Verified connector behavior: Claude can create drafts in Gmail but cannot
-send email on the user's behalf — the send function is not enabled, and all emails must
-be sent manually from Gmail. B is wrong because no approval flow enables sending; D is
-wrong because drafting/labeling are write-ish capabilities, so the connector is not
-purely read-only.
+**Q2 — Correct: C**
 
-**Q4 — B.** On Team and Enterprise plans, an Owner enabling a connector makes it
-available but grants no one access; each person must authenticate with the third-party
-service individually (except under enterprise-managed auth, which the scenario doesn't
-describe). A is false (Google Workspace connectors are broadly available); C misreads
-how connectors work; D is invented.
+- **Why C:** Stable, reusable reference material (brand guide, glossary) belongs in project knowledge; disposable weekly input stays a single-chat upload; instructions define behavior and point at the knowledge files.
+- **Why not A:** Confuses instructions with knowledge.
+- **Why not B:** Churns the knowledge base with one-off content.
+- **Why not D:** Forfeits the persistence benefit projects exist to provide.
 
-**Q5 — A and C.** Owners can restrict connector actions org-wide (Always allow / Needs
-approval / Blocked per permission category), e.g., allow reading email but block writes
-— and these restrictions can't be overridden by individual users. Connector hygiene
-(least footprint, permission inheritance from the source system) is the complementary
-control. B and D rely on soft, non-enforcing mechanisms; E violates the per-user
-authentication model and basic access hygiene.
+**Q3 — Correct: C**
 
-**Q6 — C.** Google Docs added to chats and projects via the Drive connector sync
-directly from Google Drive, so Claude works with the latest version; a static PDF upload
-is a snapshot that must be manually replaced. This is the core "keep knowledge sources
-current" behavior: prefer synced sources for volatile content and prune stale uploads.
+- **Why C:** Verified connector behavior: Claude can create drafts in Gmail but cannot send email on the user's behalf — the send function is not enabled, and all emails must be sent manually from Gmail.
+- **Why not B:** No approval flow enables sending.
+- **Why not D:** Drafting/labeling are write-ish capabilities, so the connector is not purely read-only.
 
-**Q7 — C.** Scope each instruction at the narrowest level that covers all needed
-contexts: account-wide "Instructions for Claude" apply to all conversations
-(terminology), while project instructions apply only to chats in that project
-(plain-language style for the newsletter). A leaks nothing to other chats where
-terminology is needed; B forces plain language everywhere; D discards the persistence
-features entirely.
+**Q4 — Correct: B**
 
-**Q8 — B.** Context is not shared across chats within a project unless it is added to
-the project knowledge base (or instructions). The durable fix is to encode the agreed
-format in project instructions or knowledge so every chat inherits it. A and D
-mislocate the issue in memory; C doesn't scale and defeats the purpose of project-level
-configuration.
+- **Why B:** On Team and Enterprise plans, an Owner enabling a connector makes it available but grants no one access; each person must authenticate with the third-party service individually (except under enterprise-managed auth, which the scenario doesn't describe).
+- **Why not A:** False — Google Workspace connectors are broadly available.
+- **Why not C:** Misreads how connectors work.
+- **Why not D:** Invented.
+
+**Q5 — Correct: A and C**
+
+- **Why A and C:** Owners can restrict connector actions org-wide (Always allow / Needs approval / Blocked per permission category), e.g., allow reading email but block writes — and these restrictions can't be overridden by individual users. Connector hygiene (least footprint, permission inheritance from the source system) is the complementary control.
+- **Why not B/D:** Rely on soft, non-enforcing mechanisms.
+- **Why not E:** Violates the per-user authentication model and basic access hygiene.
+
+**Q6 — Correct: C**
+
+- **Why C:** Google Docs added to chats and projects via the Drive connector sync directly from Google Drive, so Claude works with the latest version; a static PDF upload is a snapshot that must be manually replaced. This is the core "keep knowledge sources current" behavior: prefer synced sources for volatile content and prune stale uploads.
+
+**Q7 — Correct: C**
+
+- **Why C:** Scope each instruction at the narrowest level that covers all needed contexts: account-wide "Instructions for Claude" apply to all conversations (terminology), while project instructions apply only to chats in that project (plain-language style for the newsletter).
+- **Why not A:** Leaks nothing to other chats where terminology is needed.
+- **Why not B:** Forces plain language everywhere.
+- **Why not D:** Discards the persistence features entirely.
+
+**Q8 — Correct: B**
+
+- **Why B:** Context is not shared across chats within a project unless it is added to the project knowledge base (or instructions). The durable fix is to encode the agreed format in project instructions or knowledge so every chat inherits it.
+- **Why not A/D:** Mislocate the issue in memory.
+- **Why not C:** Doesn't scale and defeats the purpose of project-level configuration.
 
 ---
 

@@ -317,23 +317,55 @@ Debrief by mapping each group's answer to the objectives: use-case screen (6.1),
 
 ### Answers
 
-**Q1 — B.** Minimizing and pseudonymizing the data lets the analysis proceed within policy — the "anonymize, don't abandon" pattern. A ignores the stated policy; C treats a prompt instruction as a data-protection control, which it is not; D abandons legitimate business value that a compliant path can deliver.
+**Q1 — Correct: B**
 
-**Q2 — A and C.** Anthropic's high-risk use case requirements for finance (among other domains) are human-in-the-loop review by a qualified professional and disclosure of AI involvement to the individuals receiving the advice. B, D, and E are irrelevant to the policy requirements.
+- **Why B:** Minimizing and pseudonymizing the data lets the analysis proceed within policy — the "anonymize, don't abandon" pattern.
+- **Why not A:** Ignores the stated policy.
+- **Why not C:** Treats a prompt instruction as a data-protection control, which it is not.
+- **Why not D:** Abandons legitimate business value that a compliant path can deliver.
 
-**Q3 — C.** Generating fake reviews falls under deceptive/fraudulent practices prohibited by the Usage Policy, regardless of who benefits or which account is used (D would add a policy-evasion problem, not remove one). The best answer declines the prohibited task while offering a compliant route to the underlying business goal.
+**Q2 — Correct: A and C**
 
-**Q4 — B.** The core issue is shadow AI: outside the sanctioned workspace, the organization's contractual terms, admin controls, and data settings do not apply, and consumer-plan defaults differ (for example, consumer products may use chats for model improvement unless the user opts out, whereas commercial products do not train on inputs/outputs by default). A, C, and D are factually unfounded or beside the point.
+- **Why A and C:** Anthropic's high-risk use case requirements for finance (among other domains) are human-in-the-loop review by a qualified professional and disclosure of AI involvement to the individuals receiving the advice.
+- **Why not B/D/E:** Irrelevant to the policy requirements.
 
-**Q5 — B.** Incidents must be surfaced through proper channels so the organization can assess exposure and remediate; concealment (A, C) compounds the violation, and public blaming (D) is neither an incident process nor constructive. Deleting the conversation may be part of remediation, but only after reporting.
+**Q3 — Correct: C**
 
-**Q6 — A.** Anthropic's Usage Policy guidance states that consumer-facing chatbots must disclose that users are interacting with AI, at minimum at the beginning of each session. B works against transparency; C and D are not requirements.
+- **Why C:** Generating fake reviews falls under deceptive/fraudulent practices prohibited by the Usage Policy, regardless of who benefits or which account is used. The best answer declines the prohibited task while offering a compliant route to the underlying business goal.
+- **Why not D:** Would add a policy-evasion problem, not remove one.
 
-**Q7 — B.** Employment decisions are a high-stakes domain where model bias can skew characterizations of people; the human review already in place must be paired with ongoing monitoring for biased patterns. A, C, and D are not governance risks.
+**Q4 — Correct: B**
 
-**Q8 — B.** A review step that never changes anything and takes seconds is a rubber stamp: over-reliance/automation bias has neutralized the control, undermining both the oversight it was designed to provide and (in high-risk contexts) the substance of a human-in-the-loop requirement. A draws the wrong conclusion — the fix is to strengthen review, not delete it.
+- **Why B:** The core issue is shadow AI: outside the sanctioned workspace, the organization's contractual terms, admin controls, and data settings do not apply, and consumer-plan defaults differ (for example, consumer products may use chats for model improvement unless the user opts out, whereas commercial products do not train on inputs/outputs by default).
+- **Why not A/C/D:** Factually unfounded or beside the point.
 
-**Q9 — C.** When policy is silent, the governed behavior is to escalate before acting — especially for connectors, which share data with third-party services processing it under their own privacy policies. A treats silence as permission; D smuggles the same sensitive data in through a different door without resolving the approval question.
+**Q5 — Correct: B**
+
+- **Why B:** Incidents must be surfaced through proper channels so the organization can assess exposure and remediate. Deleting the conversation may be part of remediation, but only after reporting.
+- **Why not A/C:** Concealment compounds the violation.
+- **Why not D:** Public blaming is neither an incident process nor constructive.
+
+**Q6 — Correct: A**
+
+- **Why A:** Anthropic's Usage Policy guidance states that consumer-facing chatbots must disclose that users are interacting with AI, at minimum at the beginning of each session.
+- **Why not B:** Works against transparency.
+- **Why not C/D:** Not requirements.
+
+**Q7 — Correct: B**
+
+- **Why B:** Employment decisions are a high-stakes domain where model bias can skew characterizations of people; the human review already in place must be paired with ongoing monitoring for biased patterns.
+- **Why not A/C/D:** Not governance risks.
+
+**Q8 — Correct: B**
+
+- **Why B:** A review step that never changes anything and takes seconds is a rubber stamp: over-reliance/automation bias has neutralized the control, undermining both the oversight it was designed to provide and (in high-risk contexts) the substance of a human-in-the-loop requirement.
+- **Why not A:** Draws the wrong conclusion — the fix is to strengthen review, not delete it.
+
+**Q9 — Correct: C**
+
+- **Why C:** When policy is silent, the governed behavior is to escalate before acting — especially for connectors, which share data with third-party services processing it under their own privacy policies.
+- **Why not A:** Treats silence as permission.
+- **Why not D:** Smuggles the same sensitive data in through a different door without resolving the approval question.
 
 ---
 

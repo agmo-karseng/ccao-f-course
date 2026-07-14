@@ -325,23 +325,66 @@ Part of honest communication is being clear about **what you are not offering**.
 
 ### Answers
 
-**Q1 — B.** Requirements analysis starts with decomposing the process and classifying steps by suitability; that determines where (and whether) Claude helps. Uploading all records first (A) skips analysis and raises data-sensitivity issues; blanket rejection (C) ignores that sub-steps like summarization may be excellent fits; jumping to an API pipeline (D) is beyond Associate scope and premature before requirements exist.
+**Q1 — Correct: B**
 
-**Q2 — B.** Claude's value here is structuring messy input and *exposing* ambiguity as questions for humans to resolve. Writing the final document from contradictory notes (A) bakes the contradictions in; asking Claude to adjudicate stakeholder conflicts (C) misassigns human authority; skipping analysis (D) guarantees rework.
+- **Why B:** Requirements analysis starts with decomposing the process and classifying steps by suitability; that determines where (and whether) Claude helps.
+- **Why not A:** Uploading all records first skips analysis and raises data-sensitivity issues.
+- **Why not C:** Blanket rejection ignores that sub-steps like summarization may be excellent fits.
+- **Why not D:** Jumping to an API pipeline is beyond Associate scope and premature before requirements exist.
 
-**Q3 — C.** Official guidance positions Research for comprehensive, multi-source synthesis with citations, and it can draw on both the web and connected internal context. Web search (A) fits quick factual lookups, not deep synthesis; extended thinking alone (B) adds reasoning depth but no current outside information; a bare chat (D) prioritizes trivial savings over the task's actual requirements.
+**Q2 — Correct: B**
 
-**Q4 — C.** Citations make verification easier; they are not verification. Findings that carry decision weight get checked against sources by a human before reaching the board. Self-assessment by the model (B) is not a reliable accuracy signal, and removing citations (D) makes the report *less* verifiable.
+- **Why B:** Claude's value here is structuring messy input and *exposing* ambiguity as questions for humans to resolve.
+- **Why not A:** Writing the final document from contradictory notes bakes the contradictions in.
+- **Why not C:** Asking Claude to adjudicate stakeholder conflicts misassigns human authority.
+- **Why not D:** Skipping analysis guarantees rework.
 
-**Q5 — B.** Every factor given — healthy process, low change capacity, downstream format dependencies, near-term deadline — favors augmentation first, with measurement creating the evidence base for any later redesign. Immediate full redesign (A) mismatches readiness; waiting for enterprise architecture (C) is unnecessary for a human-in-the-loop pilot; removing editorial review (D) removes the accountability the workflow depends on.
+**Q3 — Correct: C**
 
-**Q6 — C.** Artifacts are designed for exactly this: substantial standalone content you iterate on, with versioning to preserve rounds and in-place editing for precise changes. New conversations each round (A) discard useful context; vague feedback (B) produces vague revisions; batching feedback for weeks (D) forfeits the fast feedback loop that makes iteration with Claude valuable.
+- **Why C:** Official guidance positions Research for comprehensive, multi-source synthesis with citations, and it can draw on both the web and connected internal context.
+- **Why not A:** Web search fits quick factual lookups, not deep synthesis.
+- **Why not B:** Extended thinking alone adds reasoning depth but no current outside information.
+- **Why not D:** A bare chat prioritizes trivial savings over the task's actual requirements.
 
-**Q7 — B.** It leads with a measured outcome, states the limitation specifically (errors are possible), and names the controls (human reviewer, read-only connector access) — the Value–Limits–Controls pattern. A promises the impossible; C demands blind trust; D hides limitations, which undermines informed decision-making and stakeholder trust.
+**Q4 — Correct: C**
 
-**Q8 — B and D.** Unattended API-driven pipelines at volume (B) and custom integration builds for systems outside available connectors (D) are agentic/engineering work that the exam guide assigns to Claude Architect and Developer scope. Configuring shared Projects (A), prompt iteration coaching (C), and using Research for a cited overview (E) are core Associate-level activities.
+- **Why C:** Findings that carry decision weight get checked against sources by a human before reaching the board.
+- **Why not A:** Citations make verification easier; they are not verification.
+- **Why not B:** Self-assessment by the model is not a reliable accuracy signal.
+- **Why not D:** Removing citations makes the report *less* verifiable.
 
-**Q9 — B.** These are verified platform controls: on Team/Enterprise plans admins enable connectors, can restrict actions org-wide (for example, read-only), and connectors always inherit each individual user's permissions from the source system. Prompt-level politeness (A) is not a control; credential sharing (C) breaks user-level permission enforcement and accountability; pasting customer data into chats (D) trades a governed integration for an ungoverned data-handling risk.
+**Q5 — Correct: B**
+
+- **Why B:** Every factor given — healthy process, low change capacity, downstream format dependencies, near-term deadline — favors augmentation first, with measurement creating the evidence base for any later redesign.
+- **Why not A:** Immediate full redesign mismatches readiness.
+- **Why not C:** Waiting for enterprise architecture is unnecessary for a human-in-the-loop pilot.
+- **Why not D:** Removing editorial review removes the accountability the workflow depends on.
+
+**Q6 — Correct: C**
+
+- **Why C:** Artifacts are designed for exactly this: substantial standalone content you iterate on, with versioning to preserve rounds and in-place editing for precise changes.
+- **Why not A:** New conversations each round discard useful context.
+- **Why not B:** Vague feedback produces vague revisions.
+- **Why not D:** Batching feedback for weeks forfeits the fast feedback loop that makes iteration with Claude valuable.
+
+**Q7 — Correct: B**
+
+- **Why B:** It leads with a measured outcome, states the limitation specifically (errors are possible), and names the controls (human reviewer, read-only connector access) — the Value–Limits–Controls pattern.
+- **Why not A:** Promises the impossible.
+- **Why not C:** Demands blind trust.
+- **Why not D:** Hides limitations, which undermines informed decision-making and stakeholder trust.
+
+**Q8 — Correct: B and D**
+
+- **Why B and D:** Unattended API-driven pipelines at volume (B) and custom integration builds for systems outside available connectors (D) are agentic/engineering work that the exam guide assigns to Claude Architect and Developer scope.
+- **Why not A/C/E:** Configuring shared Projects (A), prompt iteration coaching (C), and using Research for a cited overview (E) are core Associate-level activities.
+
+**Q9 — Correct: B**
+
+- **Why B:** These are verified platform controls: on Team/Enterprise plans admins enable connectors, can restrict actions org-wide (for example, read-only), and connectors always inherit each individual user's permissions from the source system.
+- **Why not A:** Prompt-level politeness is not a control.
+- **Why not C:** Credential sharing breaks user-level permission enforcement and accountability.
+- **Why not D:** Pasting customer data into chats trades a governed integration for an ungoverned data-handling risk.
 
 ---
 

@@ -331,21 +331,58 @@ Debrief by asking which cards had *two* defensible answers and what extra fact w
 
 ### Answers
 
-**Q1 — B.** High-volume, straightforward, speed/cost-sensitive work is the officially characterized fit for the fastest, most economical model family. A over-provisions cost and latency; C confuses cost control with capability removal; D adds delay and doesn't address the model-to-task mismatch.
+**Q1 — Correct: B**
 
-**Q2 — B.** Projects exist precisely for recurring work with standing context: a knowledge base for the style guide and past issues, plus project instructions for tone. A is not how memory or context works; C misuses Research (the guide is internal, not on the web); D invites context degradation instead of persisting context properly.
+- **Why B:** High-volume, straightforward, speed/cost-sensitive work is the officially characterized fit for the fastest, most economical model family.
+- **Why not A:** Over-provisions cost and latency.
+- **Why not C:** Confuses cost control with capability removal.
+- **Why not D:** Adds delay and doesn't address the model-to-task mismatch.
 
-**Q3 — C.** Research is officially positioned for comprehensive gathering across many sources, run agentically, with citations. A fits one-or-two-lookup questions; B adds reasoning but no multi-source retrieval; D is an output format, not an information-gathering capability (though the finished report could be delivered as an artifact).
+**Q2 — Correct: B**
 
-**Q4 — B.** Substantial, self-contained, reusable content is exactly the artifact use case, with iteration, version switching, export, and sharing. A discards the ability to iterate on a stable deliverable; C misunderstands project instructions (guidance for Claude, not an app container); D misunderstands memory (it stores context about you and your work, not interactive deliverables).
+- **Why B:** Projects exist precisely for recurring work with standing context: a knowledge base for the style guide and past issues, plus project instructions for tone.
+- **Why not A:** Not how memory or context works.
+- **Why not C:** Misuses Research (the guide is internal, not on the web).
+- **Why not D:** Invites context degradation instead of persisting context properly.
 
-**Q5 — A and C.** The most capable family is justified when complexity and stakes demand top quality — accuracy outweighing cost, and costly-if-wrong outputs. B, D, and E are the officially characterized profile of the fastest, most economical family.
+**Q3 — Correct: C**
 
-**Q6 — B.** The symptoms are context degradation with a need for continuity, so summarize-then-restart is the right pattern, moving recurring materials into persistent storage (a Project). A worsens the context load; C is false — every model has a finite context window; D is unreliable and destroys potentially needed history.
+- **Why C:** Research is officially positioned for comprehensive gathering across many sources, run agentically, with citations.
+- **Why not A:** Fits one-or-two-lookup questions.
+- **Why not B:** Adds reasoning but no multi-source retrieval.
+- **Why not D:** An output format, not an information-gathering capability (though the finished report could be delivered as an artifact).
 
-**Q7 — C.** Official guidance says to establish criteria (capabilities, speed, cost), test with your actual prompts and data, and upgrade or downgrade based on measured results — either starting fast-and-cheap or starting most-capable, then optimizing. A and D skip evaluation in opposite directions; B is irrelevant to fit.
+**Q4 — Correct: B**
 
-**Q8 — B.** Memory carries synthesized personal and working context across chats, and each Project keeps its own knowledge, instructions, and separate memory space for a workstream. A relies on a finite context window; C does the opposite (incognito chats are excluded from memory); D misstates what research mode is for.
+- **Why B:** Substantial, self-contained, reusable content is exactly the artifact use case, with iteration, version switching, export, and sharing.
+- **Why not A:** Discards the ability to iterate on a stable deliverable.
+- **Why not C:** Misunderstands project instructions (guidance for Claude, not an app container).
+- **Why not D:** Misunderstands memory (it stores context about you and your work, not interactive deliverables).
+
+**Q5 — Correct: A and C**
+
+- **Why A and C:** The most capable family is justified when complexity and stakes demand top quality — accuracy outweighing cost, and costly-if-wrong outputs.
+- **Why not B/D/E:** The officially characterized profile of the fastest, most economical family.
+
+**Q6 — Correct: B**
+
+- **Why B:** The symptoms are context degradation with a need for continuity, so summarize-then-restart is the right pattern, moving recurring materials into persistent storage (a Project).
+- **Why not A:** Worsens the context load.
+- **Why not C:** False — every model has a finite context window.
+- **Why not D:** Unreliable and destroys potentially needed history.
+
+**Q7 — Correct: C**
+
+- **Why C:** Official guidance says to establish criteria (capabilities, speed, cost), test with your actual prompts and data, and upgrade or downgrade based on measured results — either starting fast-and-cheap or starting most-capable, then optimizing.
+- **Why not A/D:** Skip evaluation in opposite directions.
+- **Why not B:** Irrelevant to fit.
+
+**Q8 — Correct: B**
+
+- **Why B:** Memory carries synthesized personal and working context across chats, and each Project keeps its own knowledge, instructions, and separate memory space for a workstream.
+- **Why not A:** Relies on a finite context window.
+- **Why not C:** Does the opposite (incognito chats are excluded from memory).
+- **Why not D:** Misstates what research mode is for.
 
 ---
 

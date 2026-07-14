@@ -21,125 +21,406 @@ Companion to `mock-exam.md`. For each item: correct answer(s), domain, and a rat
 
 ## Rationales
 
-**1 — B · D2.** Asking "why is A right?" hands Claude a premise to argue, so the one-sided output reflects framing bias introduced by the prompt, not evidence about the decision; a neutral comparison including the case against Site A produces decision-grade analysis. (A) mistakes persuasiveness for correctness. (C) relies on self-reported confidence, which is not an accuracy signal. (D) polishes tone without touching the bias.
+**1 — Correct: B · Domain 2**
 
-**2 — B · D3.** A single, current, factual question is the documented fit for web search — one or two lookups. Research (A) spends minutes and heavier usage on a one-lookup answer; extended thinking (C) adds reasoning depth but retrieves nothing current; last year's brochure (D) cannot contain this morning's change.
+- **Why B:** Asking "why is A right?" hands Claude a premise to argue, so the one-sided output reflects framing bias introduced by the prompt, not evidence about the decision; a neutral comparison including the case against Site A produces decision-grade analysis.
+- **Why not A:** Mistakes persuasiveness for correctness.
+- **Why not C:** Relies on self-reported confidence, which is not an accuracy signal.
+- **Why not D:** Polishes tone without touching the bias.
 
-**3 — B · D6.** The trend analysis does not need identities, so minimizing the data — stripping or tokenizing names and IDs — lets the task proceed within policy ("anonymize, don't abandon"). (A) ignores the stated policy; internal purpose is not a defense. (C) treats a prompt instruction as a data-protection control, which it is not — handling is governed by account, settings, and agreements. (D) forfeits legitimate value a compliant path can deliver.
+**2 — Correct: B · Domain 3**
 
-**4 — A · D1.** Anthropic's documented formatting guidance is to tell Claude what to do instead of what not to do — "write in smoothly flowing prose paragraphs" — and to match the prompt's own style to the desired output. Repetition (B) and capital letters (C) add emphasis, not specification, and prohibitions are the weaker control being replaced. Switching platforms (D) abandons a solvable prompt-level problem.
+- **Why B:** A single, current, factual question is the documented fit for web search — one or two lookups.
+- **Why not A:** Research spends minutes and heavier usage on a one-lookup answer.
+- **Why not C:** Extended thinking adds reasoning depth but retrieves nothing current.
+- **Why not D:** Last year's brochure cannot contain this morning's change.
 
-**5 — B · D4.** Strong Claude use cases are language-heavy information work; here the bottleneck is physical warehouse capacity, so AI targets the problem poorly and the honest analysis says so while keeping Claude on genuine language tasks like delay communications. (A) and (D) apply features to a non-language bottleneck; (C) misdiagnoses a use-case-fit problem as a model-capability problem.
+**3 — Correct: B · Domain 6**
 
-**6 — A · D5.** Verified connector behavior: Gmail gives Claude email content and attachment *metadata*, not attachment content, so the file must be uploaded directly. (B) is false — Google Workspace connectors are broadly available. (C) is false — Claude reads spreadsheets supplied through supported routes. (D) is invented; authentication is not per-request.
+- **Why B:** The trend analysis does not need identities, so minimizing the data — stripping or tokenizing names and IDs — lets the task proceed within policy ("anonymize, don't abandon").
+- **Why not A:** Ignores the stated policy; internal purpose is not a defense.
+- **Why not C:** Treats a prompt instruction as a data-protection control, which it is not — handling is governed by account, settings, and agreements.
+- **Why not D:** Forfeits legitimate value a compliant path can deliver.
 
-**7 — B · D2.** Facts are correct but structure drifts across the batch — that is inconsistency (format drift), fixed by re-specifying the format and regenerating the drifted items, with smaller batches and spot-checks going forward. (A) misuses "hallucination": nothing was fabricated. (C) involves no skewed framing of people or perspectives. (D) is wrong because no items are missing — they are present but off-template.
+**4 — Correct: A · Domain 1**
 
-**8 — B · D7.** No rewording makes a model know post-cutoff events from training data alone; the fix is recognizing the knowledge boundary and supplying current information (web search or pasted sources). (A) and (C) keep pulling the wrong lever. (D) is self-certification, which is never a validation step.
+- **Why A:** Anthropic's documented formatting guidance is to tell Claude what to do instead of what not to do — "write in smoothly flowing prose paragraphs" — and to match the prompt's own style to the desired output.
+- **Why not B/C:** Repetition (B) and capital letters (C) add emphasis, not specification, and prohibitions are the weaker control being replaced.
+- **Why not D:** Switching platforms abandons a solvable prompt-level problem.
 
-**9 — B · D4.** Honest measurement reports what improved and what did not, quantifies the net effect, and plans the fix — that is what earns stakeholder trust. (A) is spin that will surface later as a credibility failure. (C) overcorrects: a net-positive pilot with a known cost is not a failure. (D) deletes an accountability control to flatter the metrics.
+**5 — Correct: B · Domain 4**
 
-**10 — B · D6.** Data handling is governed by account type, settings, and agreements — not by chat text — and the policy restriction applies to the act of uploading regardless of what the prompt says. (A) and (C) treat prompt wording as a control. (D) fails for the same reason: project instructions are behavioral guidance for Claude, not a data-protection mechanism.
+- **Why B:** Strong Claude use cases are language-heavy information work; here the bottleneck is physical warehouse capacity, so AI targets the problem poorly and the honest analysis says so while keeping Claude on genuine language tasks like delay communications.
+- **Why not A/D:** Apply features to a non-language bottleneck.
+- **Why not C:** Misdiagnoses a use-case-fit problem as a model-capability problem.
 
-**11 — A · D1.** Numbered sequential steps that force evidence-gathering (themes with counts, verbatim quotes) before conclusions produce recommendations grounded in the data — the documented decomposition pattern. (B) reverses the logic and invites motivated reasoning. (C) adds untestable adjectives, not structure. (D) is regeneration without diagnosis.
+**6 — Correct: A · Domain 5**
 
-**12 — B · D3.** On Enterprise plans, administrators can restrict which models and effort levels are available to a role, so a "missing" model is most likely a policy, not a bug — the right move is to ask the admin. (A) misdiagnoses configuration as corruption. (C) contradicts the friend still using the model. (D) inverts how enterprise controls work: it's restriction by policy, not a smaller entitlement by definition.
+- **Why A:** Verified connector behavior: Gmail gives Claude email content and attachment *metadata*, not attachment content, so the file must be uploaded directly.
+- **Why not B:** False — Google Workspace connectors are broadly available.
+- **Why not C:** False — Claude reads spreadsheets supplied through supported routes.
+- **Why not D:** Invented; authentication is not per-request.
 
-**13 — B · D2.** Deadlines and fee amounts are time-sensitive, verifiable specifics that may post-date training data; the currency check against a live authoritative source is required before the memo ships. (A) mistakes specificity for evidence — fabricated detail looks specific. (C) is model self-certification. (D) uses a disclaimer as a substitute for verification, which manages blame, not accuracy.
+**7 — Correct: B · Domain 2**
 
-**14 — C · D5.** On paid plans, Claude automatically switches project knowledge into RAG mode as it approaches context limits, loading only relevant content and expanding effective capacity — no manual toggle exists (A), uploads don't simply stop (B), and knowledge is not truncated oldest-first (D). Pruning still matters for focus, which the credited option acknowledges.
+- **Why B:** Facts are correct but structure drifts across the batch — that is inconsistency (format drift), fixed by re-specifying the format and regenerating the drifted items, with smaller batches and spot-checks going forward.
+- **Why not A:** Misuses "hallucination": nothing was fabricated.
+- **Why not C:** The scenario involves no skewed framing of people or perspectives.
+- **Why not D:** Wrong because no items are missing — they are present but off-template.
 
-**15 — B · D4.** The scenario stacks every redesign-favoring factor: structural process problems, successful pilots as an evidence base, and sponsored change capacity — so "redesign from evidence" is the documented next step. (A) ignores that the conditions for redesign have been met. (C) abandons a needed process. (D) removes human accountability, which no efficiency gain justifies.
+**8 — Correct: B · Domain 7**
 
-**16 — B · D7.** Changing one variable at a time is the diagnostic discipline that lets you attribute improvements and make the fix repeatable; wholesale rewrites destroy attribution. (A) throws capability at an unmeasured problem. (C) confuses volume with precision. (D) asks the model to evaluate prompts it cannot compare against her actual success criteria.
+- **Why B:** No rewording makes a model know post-cutoff events from training data alone; the fix is recognizing the knowledge boundary and supplying current information (web search or pasted sources).
+- **Why not A/C:** Keep pulling the wrong lever.
+- **Why not D:** Self-certification, which is never a validation step.
 
-**17 — B · D6.** Insurance is a named high-risk domain: Anthropic's Usage Policy requires human-in-the-loop review by a qualified professional and disclosure to consumers that AI helped produce the recommendation. (A) and (D) are irrelevant to the policy. (C) is wrong — consumer-facing insurance recommendations are precisely the high-risk case the requirements target.
+**9 — Correct: B · Domain 4**
 
-**18 — A and C · D2.** Contract language carries legal consequences beyond what output-level checks validate (A), and a recommendation in a domain where the associate cannot tell right from plausible adds no value from self-review — the definition of needing an expert (C). (B), (D), and (E) are low-stakes or already-verified content where the associate's own proportionate review suffices.
+- **Why B:** Honest measurement reports what improved and what did not, quantifies the net effect, and plans the fix — that is what earns stakeholder trust.
+- **Why not A:** Spin that will surface later as a credibility failure.
+- **Why not C:** Overcorrects: a net-positive pilot with a known cost is not a failure.
+- **Why not D:** Deletes an accountability control to flatter the metrics.
 
-**19 — A · D1.** This is the documented "golden rule of clear prompting": show the prompt to a colleague with minimal context; the gaps they hit are the gaps Claude will hit. (B) tests output length, not clarity. (C) adds urgency, not information. (D) invents a metric — precision, not word count, is the goal.
+**10 — Correct: B · Domain 6**
 
-**20 — A and C · D3.** Research is positioned for comprehensive, multi-source synthesis with citations (A) and can draw on connected internal context alongside the web (C). (B) is the web-search profile. (D) is the extended-thinking profile. (E) argues against Research, which consumes usage limits faster than normal chat.
+- **Why B:** Data handling is governed by account type, settings, and agreements — not by chat text — and the policy restriction applies to the act of uploading regardless of what the prompt says.
+- **Why not A/C:** Treat prompt wording as a control.
+- **Why not D:** Fails for the same reason: project instructions are behavioral guidance for Claude, not a data-protection mechanism.
 
-**21 — B · D4.** A solution is durable when it survives its designer: proven prompts moved into shared project instructions, curated knowledge, and a usage note naming purpose, limits, and the review step. (A) leaves knowledge trapped in one person's chat history. (C) makes the workflow dependent on the departed person. (D) misuses memory — it is personal, inferred context, not team infrastructure.
+**11 — Correct: A · Domain 1**
 
-**22 — A and B · D5.** Project instructions and project knowledge are exactly the two surfaces applied across every chat in a project. (C) and (E) fail because Claude has no access to the project name or description — they are metadata for humans. (D) fails because context is not shared between chats in a project; each chat starts fresh apart from instructions and knowledge.
+- **Why A:** Numbered sequential steps that force evidence-gathering (themes with counts, verbatim quotes) before conclusions produce recommendations grounded in the data — the documented decomposition pattern.
+- **Why not B:** Reverses the logic and invites motivated reasoning.
+- **Why not C:** Adds untestable adjectives, not structure.
+- **Why not D:** Regeneration without diagnosis.
 
-**23 — B · D2.** Material inconsistency across runs of the same prompt is a documented hallucination warning: the figure needs verification against an external authoritative source. (A) averages contradictions into a manufactured number. (C) invents a reliability rule. (D) is still self-referential — a majority of model runs can be consistently wrong; repetition signals stability, not truth.
+**12 — Correct: B · Domain 3**
 
-**24 — B · D6.** Submitting feedback can store the entire related conversation with Anthropic for an extended retention period, so conversations containing sensitive data should not be rated, and org settings (admins can disable feedback) should be followed. (A) and (D) misstate how feedback data is handled. (C) is invented — feedback stores data; it does not delete it.
+- **Why B:** On Enterprise plans, administrators can restrict which models and effort levels are available to a role, so a "missing" model is most likely a policy, not a bug — the right move is to ask the admin.
+- **Why not A:** Misdiagnoses configuration as corruption.
+- **Why not C:** Contradicts the friend still using the model.
+- **Why not D:** Inverts how enterprise controls work: it's restriction by policy, not a smaller entitlement by definition.
 
-**25 — A · D7.** Recurring similar small items are the documented batching case: one clear instruction set, a specified structure, batch sizes small enough to hold quality, and spot-checks. (B) over-provisions model capability without fixing the repeated-setup waste. (C) is task overload — the composite-prompt trap. (D) buys throughput by discarding the quality control.
+**13 — Correct: B · Domain 2**
 
-**26 — B · D1.** Anthropic's guidance makes success criteria the precondition for iteration: without a definition of "better," you can only regenerate and gamble. (A) and (C) change inputs without creating a measuring stick. (D) is a real anti-hallucination technique but irrelevant to the stated problem, which is evaluating improvement.
+- **Why B:** Deadlines and fee amounts are time-sensitive, verifiable specifics that may post-date training data; the currency check against a live authoritative source is required before the memo ships.
+- **Why not A:** Mistakes specificity for evidence — fabricated detail looks specific.
+- **Why not C:** Model self-certification.
+- **Why not D:** Uses a disclaimer as a substitute for verification, which manages blame, not accuracy.
 
-**27 — A · D4.** The exam-rewarded decomposition keeps Claude on language and information work (extract, summarize, flag) and keeps decision authority with humans. (B) and (D) remove the human from an approval decision — exactly the step that requires human accountability. (C) over-refuses: the sub-steps are excellent Claude use cases with review.
+**14 — Correct: C · Domain 5**
 
-**28 — B · D2.** Output feeding a system for sorting and filtering calls for structured data; a fixed schema also makes omissions immediately visible, doing double duty for evaluation. (A) and (D) deliver prose to a tool that needs fields. (C) picks a delivery window, not a data structure — a formatted memo still can't be sorted.
+- **Why C:** On paid plans, Claude automatically switches project knowledge into RAG mode as it approaches context limits, loading only relevant content and expanding effective capacity. Pruning still matters for focus, which the credited option acknowledges.
+- **Why not A:** No manual toggle exists.
+- **Why not B:** Uploads don't simply stop.
+- **Why not D:** Knowledge is not truncated oldest-first.
 
-**29 — A · D3.** Incognito chats are excluded from memory and past-chat search — the designed mechanism for a sensitive one-off. (B) does not work; in-chat requests to "forget" are not a data or memory control. (C) makes the conversation *more* persistent, inside a project with its own memory space. (D) is concealment, not exclusion.
+**15 — Correct: B · Domain 4**
 
-**30 — A and B · D6.** Tracking a person's private whereabouts and activity without consent is prohibited surveillance/privacy violation (A), and mass-generating fake grassroots comments to manipulate a poll is deceptive, scaled abuse that also undermines civic processes (B). (C), (D), and (E) are routine, appropriate business uses.
+- **Why B:** The scenario stacks every redesign-favoring factor: structural process problems, successful pilots as an evidence base, and sponsored change capacity — so "redesign from evidence" is the documented next step.
+- **Why not A:** Ignores that the conditions for redesign have been met.
+- **Why not C:** Abandons a needed process.
+- **Why not D:** Removes human accountability, which no efficiency gain justifies.
 
-**31 — B · D5.** Verified behavior: archiving a project resets all sharing permissions to private for security, so after unarchiving the owner must deliberately re-share. (A) invents corruption. (C) is false — archived projects persist (and cannot be deleted until unarchived). (D) confuses project permissions with account status.
+**16 — Correct: B · Domain 7**
 
-**32 — A, B, and C · D2.** The validation workflow for compliance-bound content is: completeness against the request, internal consistency of claims, and external verification of load-bearing facts against the authoritative text. (D) is self-reported confidence, which the official sample rationale explicitly rejects as an accuracy signal. (E) is a disclaimer — it labels risk instead of checking anything.
+- **Why B:** Changing one variable at a time is the diagnostic discipline that lets you attribute improvements and make the fix repeatable; wholesale rewrites destroy attribution.
+- **Why not A:** Throws capability at an unmeasured problem.
+- **Why not C:** Confuses volume with precision.
+- **Why not D:** Asks the model to evaluate prompts it cannot compare against her actual success criteria.
 
-**33 — B · D4.** The credited answer is the Value–Limits–Controls pattern: measured pilot value, a plainly stated limitation, and the control that makes it manageable — review is what lets the speed gain be captured safely. (A) concedes a false premise. (C) offers to remove a needed control to please the stakeholder. (D) demands blind trust, the opposite of honest stakeholder communication.
+**17 — Correct: B · Domain 6**
 
-**34 — B · D1.** Flipping to a critique mode via role framing — a skeptical CFO attacking costs, risks, and objections — is the documented way to stress-test a brainstormed shortlist after generation. (A) asks for preference, not scrutiny. (C) diverges again when the task now needs evaluation. (D) leans on self-assigned scores, which measure assertiveness, not merit.
+- **Why B:** Insurance is a named high-risk domain: Anthropic's Usage Policy requires human-in-the-loop review by a qualified professional and disclosure to consumers that AI helped produce the recommendation.
+- **Why not A/D:** Irrelevant to the policy.
+- **Why not C:** Wrong — consumer-facing insurance recommendations are precisely the high-risk case the requirements target.
 
-**35 — B · D7.** Official guidance for cut-off responses: supply the previous prompt and partial response so Claude can continue where it left off, and request inherently large deliverables in sections. (A) is a blind retry. (C) removes context the plan may depend on. (D) abandons a task with a documented, routine fix.
+**18 — Correct: A and C · Domain 2**
 
-**36 — A · D3.** "Start most capable, optimize down" is one of Anthropic's two documented starting strategies, and it fits when accuracy outweighs cost — the model establishes a quality ceiling, then evidence from testing justifies any step down. (B) skips evaluation in the risky direction for a high-stakes task. (C) is irrelevant to fit. (D) refuses the test-and-compare practice guidance calls for.
+- **Why A:** Contract language carries legal consequences beyond what output-level checks validate.
+- **Why C:** A recommendation in a domain where the associate cannot tell right from plausible adds no value from self-review — the definition of needing an expert.
+- **Why not B/D/E:** Low-stakes or already-verified content where the associate's own proportionate review suffices.
 
-**37 — B · D2.** Adapting for a customer audience means confirmed facts in plain language — internal codenames removed, and the unconfirmed root-cause hypothesis excluded, since publishing speculation externally is a factual and legal risk. (A) confuses transparency with publishing unverified claims. (C) ignores that audiences legitimately need different outputs from the same validated facts. (D) makes the notice unverifiable, which is a defect, not a safeguard.
+**19 — Correct: A · Domain 1**
 
-**38 — B · D6.** The verified contrast: commercial products do not train on customer inputs/outputs by default, while consumer plans may unless the user opts out, with exceptions such as explicitly reported (feedback) content. (A) and (C) are the two absolutist errors this fact corrects. (D) inverts the actual split, which is consumer/commercial, not free/paid.
+- **Why A:** This is the documented "golden rule of clear prompting": show the prompt to a colleague with minimal context; the gaps they hit are the gaps Claude will hit.
+- **Why not B:** Tests output length, not clarity.
+- **Why not C:** Adds urgency, not information.
+- **Why not D:** Invents a metric — precision, not word count, is the goal.
 
-**39 — A and B · D4.** Sound change management pilots small with a defined success measure (A) and names accountable reviewers and outcome owners (B). (C) skips the evidence-building step. (D) removes the control that makes the workflow trustworthy. (E) guarantees the process dies with staff turnover — documentation is part of integration.
+**20 — Correct: A and C · Domain 3**
 
-**40 — B · D5.** Instructions steer behavior; knowledge supplies reference material. Moving the style guide into project knowledge and keeping short, behavioral instructions that reference the file by name is the documented structure. (A) doubles the bloat. (C) fails because Claude cannot see the project description. (D) reintroduces the re-pasting problem Projects exist to solve.
+- **Why A:** Research is positioned for comprehensive, multi-source synthesis with citations.
+- **Why C:** Research can draw on connected internal context alongside the web.
+- **Why not B:** That is the web-search profile.
+- **Why not D:** That is the extended-thinking profile.
+- **Why not E:** Argues against Research, which consumes usage limits faster than normal chat.
 
-**41 — B · D2.** Verification must be proportionate to stakes: brainstorms get light review; external, decision-bearing content gets the full workflow. This associate has the priorities inverted. (A) misreads a judgment problem as a speed problem. (C) rejects triage, which is the tested skill. (D) overcorrects — even ideation deserves a sanity pass.
+**21 — Correct: B · Domain 4**
 
-**42 — B · D1.** Anthropic's guidance says examples must be relevant *and diverse*, covering edge cases so Claude doesn't learn unintended patterns — four same-type examples taught "everything is a refund." (A) misstates the guidance, which recommends 3–5 examples. (C) discards one of the most reliable steering techniques. (D) substitutes adjectives for the demonstration that examples provide.
+- **Why B:** A solution is durable when it survives its designer: proven prompts moved into shared project instructions, curated knowledge, and a usage note naming purpose, limits, and the review step.
+- **Why not A:** Leaves knowledge trapped in one person's chat history.
+- **Why not C:** Makes the workflow dependent on the departed person.
+- **Why not D:** Misuses memory — it is personal, inferred context, not team infrastructure.
 
-**43 — B · D3.** Deep reasoning over material already provided, with no fresh information needed, is the documented extended-thinking (or higher-effort) profile. (A) and (C) add retrieval the task doesn't need. (D) misunderstands incognito — it affects memory and history, not reasoning quality.
+**22 — Correct: A and B · Domain 5**
 
-**44 — B · D6.** Accountability stays with the human and organization that used the output; "Claude wrote it" never transfers responsibility, which is exactly why human review requirements exist. (A) mislocates responsibility in the vendor. (C) normalizes unreviewed errors. (D) shifts the sender's duty onto the recipient.
+- **Why A and B:** Project instructions and project knowledge are exactly the two surfaces applied across every chat in a project.
+- **Why not C/E:** Fail because Claude has no access to the project name or description — they are metadata for humans.
+- **Why not D:** Fails because context is not shared between chats in a project; each chat starts fresh apart from instructions and knowledge.
 
-**45 — B · D4.** Claude's process analysis is a hypothesis generated from documents; the people who run the process validate it against operational reality before anything changes. (A) is the classic wrong answer — docs and reality diverge. (C) is model self-review, not validation. (D) over-refuses; the proposal is valuable input once verified.
+**23 — Correct: B · Domain 2**
 
-**46 — B · D2.** Citations make verification easier; they are not verification. The associate must read the cited sources because synthesis can drop the context that made a claim accurate, and the output is only as good as its sources — especially for a public marketing claim. (A) and (D) treat citation presence or count as proof. (C) is self-certification.
+- **Why B:** Material inconsistency across runs of the same prompt is a documented hallucination warning: the figure needs verification against an external authoritative source.
+- **Why not A:** Averages contradictions into a manufactured number.
+- **Why not C:** Invents a reliability rule.
+- **Why not D:** Still self-referential — a majority of model runs can be consistently wrong; repetition signals stability, not truth.
 
-**47 — B · D7.** Contradictory instructions are a documented cause of ignored-instruction failures; the fix is consolidating to one clear, conflict-free prompt with the surviving constraints stated prominently. (A) adds emphasis without resolving the contradiction — both instructions cannot be followed. (C) gambles on randomness. (D) splits one deliverable across contexts, guaranteeing neither chat sees the full requirement.
+**24 — Correct: B · Domain 6**
 
-**48 — B · D5.** Memory is automatic and inferred — useful, but not a compliance mechanism; hard requirements belong explicitly in project instructions, which apply to every chat in the project. (A) overstates memory's reliability for must-follow rules. (C) fails because Claude has no access to the project title. (D) understates the platform — persistent instructions exist for exactly this.
+- **Why B:** Submitting feedback can store the entire related conversation with Anthropic for an extended retention period, so conversations containing sensitive data should not be rated, and org settings (admins can disable feedback) should be followed.
+- **Why not A/D:** Misstate how feedback data is handled.
+- **Why not C:** Invented — feedback stores data; it does not delete it.
 
-**49 — B · D2.** A good escalation package — output, prompt and sources, what was verified and how, what couldn't be verified, and the specific question — respects the expert's time and demonstrates associate-level judgment. (A) and (C) transfer raw material without analysis, forcing legal to reconstruct the work. (D) wastes the verification already done; context is help, not contamination.
+**25 — Correct: A · Domain 7**
 
-**50 — B · D6.** Coordinated fake engagement is scaled abuse and deception prohibited by the Usage Policy; the credited pattern declines the prohibited task while offering a compliant route to the underlying goal. (A) normalizes a prohibited practice. (C) adds policy evasion on top of the violation — the account doesn't change what the activity is. (D) makes the violation smaller, not permissible.
+- **Why A:** Recurring similar small items are the documented batching case: one clear instruction set, a specified structure, batch sizes small enough to hold quality, and spot-checks.
+- **Why not B:** Over-provisions model capability without fixing the repeated-setup waste.
+- **Why not C:** Task overload — the composite-prompt trap.
+- **Why not D:** Buys throughput by discarding the quality control.
 
-**51 — A and B · D1.** Two documented techniques fit: XML-style tags disambiguate content types so document text can't be mistaken for instructions (A), and long-context guidance places the document near the top with the query after it, which measurably improves quality on complex inputs (B). (C) adds emphasis, not structure. (D) fragments the document. (E) deletes required content instead of organizing it.
+**26 — Correct: B · Domain 1**
 
-**52 — B · D4.** Contractual uptime and throughput guarantees on unattended, high-volume automation are the textbook signals that work has left Associate chat-workflow scope; the credited move is documenting requirements and handing off to engineering or Architect/Developer expertise. (A) promises what a chat-based workflow cannot deliver. (C) over-refuses a client with a legitimate need. (D) fakes a guarantee with a manual check.
+- **Why B:** Anthropic's guidance makes success criteria the precondition for iteration: without a definition of "better," you can only regenerate and gamble.
+- **Why not A/C:** Change inputs without creating a measuring stick.
+- **Why not D:** A real anti-hallucination technique but irrelevant to the stated problem, which is evaluating improvement.
 
-**53 — B · D3.** Automatic context management summarizes earlier messages so most long conversations can continue — but it has documented edge cases, so restart/summarize/persist judgment remains the associate's job. (A) and (D) overstate the mechanism (and model family is irrelevant to it). (C) denies a real, documented feature.
+**27 — Correct: A · Domain 4**
 
-**54 — B · D2.** Format selection follows the content: inline for short answers consumed in-conversation; artifacts for significant, self-contained, reusable content. Blanket artifact policy adds friction without value. (A) and (C) impose ceremony where none is needed. (D) swings to the opposite error — documents, diagrams, and reports are legitimate artifact content, not just code.
+- **Why A:** The exam-rewarded decomposition keeps Claude on language and information work (extract, summarize, flag) and keeps decision authority with humans.
+- **Why not B/D:** Remove the human from an approval decision — exactly the step that requires human accountability.
+- **Why not C:** Over-refuses: the sub-steps are excellent Claude use cases with review.
 
-**55 — B · D6.** This is the proportionality/human-impact dimension of responsible use: policy permission is the floor, and consequential people-affecting communications warrant genuine human authorship and ownership, with Claude assisting rather than replacing the human. (A) treats compliance as the whole analysis. (C) reduces an ethical question to tone. (D) adds impersonation — presenting AI output under a fictitious human identity — to the original problem.
+**28 — Correct: B · Domain 2**
 
-**56 — B · D5.** Superseded versions must be removed: outdated knowledge is worse than missing knowledge because Claude will confidently use it. (A) and (C) leave the contradiction in place and hope retrieval favors the right file. (D) shifts a configuration fix onto every user in every chat, which is exactly what knowledge maintenance exists to prevent.
+- **Why B:** Output feeding a system for sorting and filtering calls for structured data; a fixed schema also makes omissions immediately visible, doing double duty for evaluation.
+- **Why not A/D:** Deliver prose to a tool that needs fields.
+- **Why not C:** Picks a delivery window, not a data structure — a formatted memo still can't be sorted.
 
-**57 — A and B · D7.** Official guidance is explicit that not every problem is best solved by prompt engineering: after well-diagnosed revisions fail, the levers are feature fit (A) and model selection matched to quality/speed/cost (B). (C) iterates indefinitely on the wrong lever. (D) is product feedback, not a resolution step. (E) is brute-force repetition with no diagnosis.
+**29 — Correct: A · Domain 3**
 
-**58 — B · D4.** AI-powered artifacts can be published and shared, with each user authenticating with their own Claude account and usage counting against their own subscription — the verified mechanism for exactly this need. (A) and (C) share a picture or code, not a working tool. (D) makes the associate the bottleneck the tool was built to remove.
+- **Why A:** Incognito chats are excluded from memory and past-chat search — the designed mechanism for a sensitive one-off.
+- **Why not B:** Does not work; in-chat requests to "forget" are not a data or memory control.
+- **Why not C:** Makes the conversation *more* persistent, inside a project with its own memory space.
+- **Why not D:** Concealment, not exclusion.
 
-**59 — B · D2.** Curation is an evaluation act: cut what doesn't serve the decision, order by importance, keep citations attached to the facts they support, and put caveats beside the claims they qualify. (A) transfers the filtering burden to the director. (C) strips the apparatus the next reviewer needs to re-verify. (D) treats raw conversation as a deliverable, which loses structure, curation, and verifiability.
+**30 — Correct: A and B · Domain 6**
 
-**60 — B · D1.** The documented self-correction chaining pattern is generate → review against explicit criteria → refine; it turns the checklist into an enforceable step. (A) hopes one pass plus an adjective clears the bar. (C) selects by length, which is not a quality criterion. (D) gates publication on self-reported scoring, which is not an accuracy or quality signal.
+- **Why A:** Tracking a person's private whereabouts and activity without consent is prohibited surveillance/privacy violation.
+- **Why B:** Mass-generating fake grassroots comments to manipulate a poll is deceptive, scaled abuse that also undermines civic processes.
+- **Why not C/D/E:** Routine, appropriate business uses.
+
+**31 — Correct: B · Domain 5**
+
+- **Why B:** Verified behavior: archiving a project resets all sharing permissions to private for security, so after unarchiving the owner must deliberately re-share.
+- **Why not A:** Invents corruption.
+- **Why not C:** False — archived projects persist (and cannot be deleted until unarchived).
+- **Why not D:** Confuses project permissions with account status.
+
+**32 — Correct: A, B, and C · Domain 2**
+
+- **Why A, B, and C:** The validation workflow for compliance-bound content is: completeness against the request, internal consistency of claims, and external verification of load-bearing facts against the authoritative text.
+- **Why not D:** Self-reported confidence, which the official sample rationale explicitly rejects as an accuracy signal.
+- **Why not E:** A disclaimer — it labels risk instead of checking anything.
+
+**33 — Correct: B · Domain 4**
+
+- **Why B:** The credited answer is the Value–Limits–Controls pattern: measured pilot value, a plainly stated limitation, and the control that makes it manageable — review is what lets the speed gain be captured safely.
+- **Why not A:** Concedes a false premise.
+- **Why not C:** Offers to remove a needed control to please the stakeholder.
+- **Why not D:** Demands blind trust, the opposite of honest stakeholder communication.
+
+**34 — Correct: B · Domain 1**
+
+- **Why B:** Flipping to a critique mode via role framing — a skeptical CFO attacking costs, risks, and objections — is the documented way to stress-test a brainstormed shortlist after generation.
+- **Why not A:** Asks for preference, not scrutiny.
+- **Why not C:** Diverges again when the task now needs evaluation.
+- **Why not D:** Leans on self-assigned scores, which measure assertiveness, not merit.
+
+**35 — Correct: B · Domain 7**
+
+- **Why B:** Official guidance for cut-off responses: supply the previous prompt and partial response so Claude can continue where it left off, and request inherently large deliverables in sections.
+- **Why not A:** A blind retry.
+- **Why not C:** Removes context the plan may depend on.
+- **Why not D:** Abandons a task with a documented, routine fix.
+
+**36 — Correct: A · Domain 3**
+
+- **Why A:** "Start most capable, optimize down" is one of Anthropic's two documented starting strategies, and it fits when accuracy outweighs cost — the model establishes a quality ceiling, then evidence from testing justifies any step down.
+- **Why not B:** Skips evaluation in the risky direction for a high-stakes task.
+- **Why not C:** Irrelevant to fit.
+- **Why not D:** Refuses the test-and-compare practice guidance calls for.
+
+**37 — Correct: B · Domain 2**
+
+- **Why B:** Adapting for a customer audience means confirmed facts in plain language — internal codenames removed, and the unconfirmed root-cause hypothesis excluded, since publishing speculation externally is a factual and legal risk.
+- **Why not A:** Confuses transparency with publishing unverified claims.
+- **Why not C:** Ignores that audiences legitimately need different outputs from the same validated facts.
+- **Why not D:** Makes the notice unverifiable, which is a defect, not a safeguard.
+
+**38 — Correct: B · Domain 6**
+
+- **Why B:** The verified contrast: commercial products do not train on customer inputs/outputs by default, while consumer plans may unless the user opts out, with exceptions such as explicitly reported (feedback) content.
+- **Why not A/C:** The two absolutist errors this fact corrects.
+- **Why not D:** Inverts the actual split, which is consumer/commercial, not free/paid.
+
+**39 — Correct: A and B · Domain 4**
+
+- **Why A:** Sound change management pilots small with a defined success measure.
+- **Why B:** Sound change management names accountable reviewers and outcome owners.
+- **Why not C:** Skips the evidence-building step.
+- **Why not D:** Removes the control that makes the workflow trustworthy.
+- **Why not E:** Guarantees the process dies with staff turnover — documentation is part of integration.
+
+**40 — Correct: B · Domain 5**
+
+- **Why B:** Instructions steer behavior; knowledge supplies reference material. Moving the style guide into project knowledge and keeping short, behavioral instructions that reference the file by name is the documented structure.
+- **Why not A:** Doubles the bloat.
+- **Why not C:** Fails because Claude cannot see the project description.
+- **Why not D:** Reintroduces the re-pasting problem Projects exist to solve.
+
+**41 — Correct: B · Domain 2**
+
+- **Why B:** Verification must be proportionate to stakes: brainstorms get light review; external, decision-bearing content gets the full workflow. This associate has the priorities inverted.
+- **Why not A:** Misreads a judgment problem as a speed problem.
+- **Why not C:** Rejects triage, which is the tested skill.
+- **Why not D:** Overcorrects — even ideation deserves a sanity pass.
+
+**42 — Correct: B · Domain 1**
+
+- **Why B:** Anthropic's guidance says examples must be relevant *and diverse*, covering edge cases so Claude doesn't learn unintended patterns — four same-type examples taught "everything is a refund."
+- **Why not A:** Misstates the guidance, which recommends 3–5 examples.
+- **Why not C:** Discards one of the most reliable steering techniques.
+- **Why not D:** Substitutes adjectives for the demonstration that examples provide.
+
+**43 — Correct: B · Domain 3**
+
+- **Why B:** Deep reasoning over material already provided, with no fresh information needed, is the documented extended-thinking (or higher-effort) profile.
+- **Why not A/C:** Add retrieval the task doesn't need.
+- **Why not D:** Misunderstands incognito — it affects memory and history, not reasoning quality.
+
+**44 — Correct: B · Domain 6**
+
+- **Why B:** Accountability stays with the human and organization that used the output; "Claude wrote it" never transfers responsibility, which is exactly why human review requirements exist.
+- **Why not A:** Mislocates responsibility in the vendor.
+- **Why not C:** Normalizes unreviewed errors.
+- **Why not D:** Shifts the sender's duty onto the recipient.
+
+**45 — Correct: B · Domain 4**
+
+- **Why B:** Claude's process analysis is a hypothesis generated from documents; the people who run the process validate it against operational reality before anything changes.
+- **Why not A:** The classic wrong answer — docs and reality diverge.
+- **Why not C:** Model self-review, not validation.
+- **Why not D:** Over-refuses; the proposal is valuable input once verified.
+
+**46 — Correct: B · Domain 2**
+
+- **Why B:** Citations make verification easier; they are not verification. The associate must read the cited sources because synthesis can drop the context that made a claim accurate, and the output is only as good as its sources — especially for a public marketing claim.
+- **Why not A/D:** Treat citation presence or count as proof.
+- **Why not C:** Self-certification.
+
+**47 — Correct: B · Domain 7**
+
+- **Why B:** Contradictory instructions are a documented cause of ignored-instruction failures; the fix is consolidating to one clear, conflict-free prompt with the surviving constraints stated prominently.
+- **Why not A:** Adds emphasis without resolving the contradiction — both instructions cannot be followed.
+- **Why not C:** Gambles on randomness.
+- **Why not D:** Splits one deliverable across contexts, guaranteeing neither chat sees the full requirement.
+
+**48 — Correct: B · Domain 5**
+
+- **Why B:** Memory is automatic and inferred — useful, but not a compliance mechanism; hard requirements belong explicitly in project instructions, which apply to every chat in the project.
+- **Why not A:** Overstates memory's reliability for must-follow rules.
+- **Why not C:** Fails because Claude has no access to the project title.
+- **Why not D:** Understates the platform — persistent instructions exist for exactly this.
+
+**49 — Correct: B · Domain 2**
+
+- **Why B:** A good escalation package — output, prompt and sources, what was verified and how, what couldn't be verified, and the specific question — respects the expert's time and demonstrates associate-level judgment.
+- **Why not A/C:** Transfer raw material without analysis, forcing legal to reconstruct the work.
+- **Why not D:** Wastes the verification already done; context is help, not contamination.
+
+**50 — Correct: B · Domain 6**
+
+- **Why B:** Coordinated fake engagement is scaled abuse and deception prohibited by the Usage Policy; the credited pattern declines the prohibited task while offering a compliant route to the underlying goal.
+- **Why not A:** Normalizes a prohibited practice.
+- **Why not C:** Adds policy evasion on top of the violation — the account doesn't change what the activity is.
+- **Why not D:** Makes the violation smaller, not permissible.
+
+**51 — Correct: A and B · Domain 1**
+
+- **Why A and B:** Two documented techniques fit: XML-style tags disambiguate content types so document text can't be mistaken for instructions (A), and long-context guidance places the document near the top with the query after it, which measurably improves quality on complex inputs (B).
+- **Why not C:** Adds emphasis, not structure.
+- **Why not D:** Fragments the document.
+- **Why not E:** Deletes required content instead of organizing it.
+
+**52 — Correct: B · Domain 4**
+
+- **Why B:** Contractual uptime and throughput guarantees on unattended, high-volume automation are the textbook signals that work has left Associate chat-workflow scope; the credited move is documenting requirements and handing off to engineering or Architect/Developer expertise.
+- **Why not A:** Promises what a chat-based workflow cannot deliver.
+- **Why not C:** Over-refuses a client with a legitimate need.
+- **Why not D:** Fakes a guarantee with a manual check.
+
+**53 — Correct: B · Domain 3**
+
+- **Why B:** Automatic context management summarizes earlier messages so most long conversations can continue — but it has documented edge cases, so restart/summarize/persist judgment remains the associate's job.
+- **Why not A/D:** Overstate the mechanism (and model family is irrelevant to it).
+- **Why not C:** Denies a real, documented feature.
+
+**54 — Correct: B · Domain 2**
+
+- **Why B:** Format selection follows the content: inline for short answers consumed in-conversation; artifacts for significant, self-contained, reusable content. Blanket artifact policy adds friction without value.
+- **Why not A/C:** Impose ceremony where none is needed.
+- **Why not D:** Swings to the opposite error — documents, diagrams, and reports are legitimate artifact content, not just code.
+
+**55 — Correct: B · Domain 6**
+
+- **Why B:** This is the proportionality/human-impact dimension of responsible use: policy permission is the floor, and consequential people-affecting communications warrant genuine human authorship and ownership, with Claude assisting rather than replacing the human.
+- **Why not A:** Treats compliance as the whole analysis.
+- **Why not C:** Reduces an ethical question to tone.
+- **Why not D:** Adds impersonation — presenting AI output under a fictitious human identity — to the original problem.
+
+**56 — Correct: B · Domain 5**
+
+- **Why B:** Superseded versions must be removed: outdated knowledge is worse than missing knowledge because Claude will confidently use it.
+- **Why not A/C:** Leave the contradiction in place and hope retrieval favors the right file.
+- **Why not D:** Shifts a configuration fix onto every user in every chat, which is exactly what knowledge maintenance exists to prevent.
+
+**57 — Correct: A and B · Domain 7**
+
+- **Why A and B:** Official guidance is explicit that not every problem is best solved by prompt engineering: after well-diagnosed revisions fail, the levers are feature fit (A) and model selection matched to quality/speed/cost (B).
+- **Why not C:** Iterates indefinitely on the wrong lever.
+- **Why not D:** Product feedback, not a resolution step.
+- **Why not E:** Brute-force repetition with no diagnosis.
+
+**58 — Correct: B · Domain 4**
+
+- **Why B:** AI-powered artifacts can be published and shared, with each user authenticating with their own Claude account and usage counting against their own subscription — the verified mechanism for exactly this need.
+- **Why not A/C:** Share a picture or code, not a working tool.
+- **Why not D:** Makes the associate the bottleneck the tool was built to remove.
+
+**59 — Correct: B · Domain 2**
+
+- **Why B:** Curation is an evaluation act: cut what doesn't serve the decision, order by importance, keep citations attached to the facts they support, and put caveats beside the claims they qualify.
+- **Why not A:** Transfers the filtering burden to the director.
+- **Why not C:** Strips the apparatus the next reviewer needs to re-verify.
+- **Why not D:** Treats raw conversation as a deliverable, which loses structure, curation, and verifiability.
+
+**60 — Correct: B · Domain 1**
+
+- **Why B:** The documented self-correction chaining pattern is generate → review against explicit criteria → refine; it turns the checklist into an enforceable step.
+- **Why not A:** Hopes one pass plus an adjective clears the bar.
+- **Why not C:** Selects by length, which is not a quality criterion.
+- **Why not D:** Gates publication on self-reported scoring, which is not an accuracy or quality signal.
 
 ---
 

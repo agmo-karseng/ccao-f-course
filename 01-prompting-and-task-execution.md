@@ -344,21 +344,61 @@ Anthropic's documented guidance for research-style work: **provide clear success
 
 ### Answers
 
-**Q1 — B.** Option B supplies task, audience, content focus, tone, length, and a call to action — the specificity and context that official guidance says drive quality. A adds urgency but no information; emphasis is not specification. C is regeneration without diagnosis: nothing about the prompt improved, so outputs stay generic. D adds a grandiose role but still specifies nothing about audience, content, or format; role prompting helps focus tone but cannot substitute for a defined task.
+**Q1 — Correct: B**
 
-**Q2 — B.** Her stated need is to inspect and correct an intermediate result (the requirements) before it drives later steps — the documented reason to chain prompts with review between turns. A produces everything at once, so a requirements misreading silently poisons the scoring and memo. C reverses the logic: conclusions first, justification after, inviting motivated reasoning. D creates three inconsistent analyses with no requirements-correction point and no shared basis for comparison.
+- **Why B:** Option B supplies task, audience, content focus, tone, length, and a call to action — the specificity and context that official guidance says drive quality.
+- **Why not A:** Adds urgency but no information; emphasis is not specification.
+- **Why not C:** Regeneration without diagnosis: nothing about the prompt improved, so outputs stay generic.
+- **Why not D:** Adds a grandiose role but still specifies nothing about audience, content, or format; role prompting helps focus tone but cannot substitute for a defined task.
 
-**Q3 — A and B.** Quote-grounding forces claims to be anchored in the actual text and makes them auditable; explicitly allowing "the report does not address this" removes the pressure to fabricate — both are techniques documented in Anthropic's hallucination-reduction guidance. C is counterproductive: self-expressed confidence is not an accuracy signal, and demanding confidence encourages assertiveness, not correctness. D removes context, which typically worsens accuracy. E changes tone, not truthfulness.
+**Q2 — Correct: B**
 
-**Q4 — B.** Official guidance describes iteration as giving follow-up instructions, clarifications, or rewrite requests; naming the audience and scoping the change ("keep the recommendations section") is targeted, efficient feedback. A gambles on randomness without adding the missing information (the audience). C discards useful conversation context and repeats the same flawed prompt. D forfeits the tool's value and is false — audience and tone are among the most promptable attributes.
+- **Why B:** Her stated need is to inspect and correct an intermediate result (the requirements) before it drives later steps — the documented reason to chain prompts with review between turns.
+- **Why not A:** Produces everything at once, so a requirements misreading silently poisons the scoring and memo.
+- **Why not C:** Reverses the logic: conclusions first, justification after, inviting motivated reasoning.
+- **Why not D:** Creates three inconsistent analyses with no requirements-correction point and no shared basis for comparison.
 
-**Q5 — B.** Anthropic documents XML-style tags precisely for prompts that mix instructions, context, examples, and inputs: wrapping each content type in its own descriptive tag prevents Claude from misinterpreting one as another. A adds emphasis, not structure. C discards a documented, high-value technique; well-structured examples help rather than confuse. D destroys the coherence of the prompt without disambiguating anything.
+**Q3 — Correct: A and B**
 
-**Q6 — A.** Official guidance identifies few-shot examples as one of the most reliable ways to steer format, tone, and structure, recommends 3–5 examples, and advises making them relevant, diverse, and wrapped in example tags. B exceeds documented guidance with diminishing returns and risks teaching accidental patterns. C is exactly the failure examples solve — hard-to-verbalize style is shown, not described. D provides no information at all.
+- **Why A and B:** Quote-grounding forces claims to be anchored in the actual text and makes them auditable; explicitly allowing "the report does not address this" removes the pressure to fabricate — both are techniques documented in Anthropic's hallucination-reduction guidance.
+- **Why not C:** Counterproductive: self-expressed confidence is not an accuracy signal, and demanding confidence encourages assertiveness, not correctness.
+- **Why not D:** Removes context, which typically worsens accuracy.
+- **Why not E:** Changes tone, not truthfulness.
 
-**Q7 — C.** Brainstorming needs explicit volume, named dimensions of variation, and separation of generation from evaluation — otherwise the model converges on one safe answer, which is what happened. A adds effort language without changing the task's shape. B applies a research/verification strategy to a divergent task, further narrowing output. D changes packaging, not the generative behavior.
+**Q4 — Correct: B**
 
-**Q8 — B.** Anthropic's long-context guidance is to place long documents near the top of the prompt with the query and instructions after them; in Anthropic's testing, putting the query at the end improved response quality on complex inputs. A is the intuitive but documented-suboptimal ordering. C fragments the document and loses coherence. D discards the source text, undermining accuracy and making claim verification impossible.
+- **Why B:** Official guidance describes iteration as giving follow-up instructions, clarifications, or rewrite requests; naming the audience and scoping the change ("keep the recommendations section") is targeted, efficient feedback.
+- **Why not A:** Gambles on randomness without adding the missing information (the audience).
+- **Why not C:** Discards useful conversation context and repeats the same flawed prompt.
+- **Why not D:** Forfeits the tool's value and is false — audience and tone are among the most promptable attributes.
+
+**Q5 — Correct: B**
+
+- **Why B:** Anthropic documents XML-style tags precisely for prompts that mix instructions, context, examples, and inputs: wrapping each content type in its own descriptive tag prevents Claude from misinterpreting one as another.
+- **Why not A:** Adds emphasis, not structure.
+- **Why not C:** Discards a documented, high-value technique; well-structured examples help rather than confuse.
+- **Why not D:** Destroys the coherence of the prompt without disambiguating anything.
+
+**Q6 — Correct: A**
+
+- **Why A:** Official guidance identifies few-shot examples as one of the most reliable ways to steer format, tone, and structure, recommends 3–5 examples, and advises making them relevant, diverse, and wrapped in example tags.
+- **Why not B:** Exceeds documented guidance with diminishing returns and risks teaching accidental patterns.
+- **Why not C:** Exactly the failure examples solve — hard-to-verbalize style is shown, not described.
+- **Why not D:** Provides no information at all.
+
+**Q7 — Correct: C**
+
+- **Why C:** Brainstorming needs explicit volume, named dimensions of variation, and separation of generation from evaluation — otherwise the model converges on one safe answer, which is what happened.
+- **Why not A:** Adds effort language without changing the task's shape.
+- **Why not B:** Applies a research/verification strategy to a divergent task, further narrowing output.
+- **Why not D:** Changes packaging, not the generative behavior.
+
+**Q8 — Correct: B**
+
+- **Why B:** Anthropic's long-context guidance is to place long documents near the top of the prompt with the query and instructions after them; in Anthropic's testing, putting the query at the end improved response quality on complex inputs.
+- **Why not A:** The intuitive but documented-suboptimal ordering.
+- **Why not C:** Fragments the document and loses coherence.
+- **Why not D:** Discards the source text, undermining accuracy and making claim verification impossible.
 
 ---
 

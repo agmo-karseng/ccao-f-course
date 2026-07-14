@@ -345,25 +345,72 @@ Organizing information is also an evaluation act. Long research outputs typicall
 
 ### Answers
 
-**Q1 — C.** Specific-looking citations are a classic hallucination pattern; a figure attributed to a report the associate cannot locate is unverified and cannot ship in a business deliverable. (A) mistakes precision for evidence — fabricated details are often highly specific. (B) relies on the model to certify its own output, which is not a reliable accuracy signal. (D) disguises the problem instead of resolving it; an unverifiable number stays unverifiable when rounded.
+**Q1 — Correct: C**
 
-**Q2 — B.** The figure is plausible and close to a real number but misstates the comparison period — exactly the "plausible-but-wrong" failure mode, caught only by checking the output against the source data. (A) misclassifies a factual error as formatting. (C) misclassifies it as bias; nothing about the framing is one-sided. (D) misclassifies it as omission; the content is present but wrong.
+- **Why C:** Specific-looking citations are a classic hallucination pattern; a figure attributed to a report the associate cannot locate is unverified and cannot ship in a business deliverable.
+- **Why not A:** Mistakes precision for evidence — fabricated details are often highly specific.
+- **Why not B:** Relies on the model to certify its own output, which is not a reliable accuracy signal.
+- **Why not D:** Disguises the problem instead of resolving it; an unverifiable number stays unverifiable when rounded.
 
-**Q3 — A and C.** Unfamiliar direct quotes are high-risk because models can produce authoritative-sounding quotes not grounded in fact (A), and confident detail about post-cutoff events without live search is precisely where training-data gaps produce fabrication (C). (B) and (D) are style and length properties with no bearing on truth. (E) is the *opposite* of a warning sign — admitting uncertainty and recommending verification is desired behavior.
+**Q2 — Correct: B**
 
-**Q4 — C.** Three mutually contradictory figures mean at least two are wrong; the fix is to resolve the truth from the underlying analysis and make the document consistent with it. (A) and (B) pick or invent a number without establishing which is correct — averaging contradictions manufactures a fourth wrong number. (D) achieves consistency by destroying the information the document exists to convey.
+- **Why B:** The figure is plausible and close to a real number but misstates the comparison period — exactly the "plausible-but-wrong" failure mode, caught only by checking the output against the source data.
+- **Why not A:** Misclassifies a factual error as formatting.
+- **Why not C:** Misclassifies it as bias; nothing about the framing is one-sided.
+- **Why not D:** Misclassifies it as omission; the content is present but wrong.
 
-**Q5 — B.** The language is age-coded and gender-exclusionary; drafted hiring content is a category where bias identification and human review before publication are required. (A) is wrong because biased output can arise regardless of prompt neutrality — evaluation is about the output, not the intent. (C) wrongly narrows the associate's role; identifying bias in drafted content is an explicit exam objective. (D) treats publication as the test environment and externalizes the harm.
+**Q3 — Correct: A and C**
 
-**Q6 — B.** Contract language carries legal consequences; this is a defining case for escalation to a qualified human expert regardless of how clean the output-level checks were. (A) confuses necessary checks with sufficient ones. (C) is still model self-review — a second model instance is not a qualified reviewer for legal liability. (D) is a disclaimer, not a control; labeling the clause does not validate it.
+- **Why A:** Unfamiliar direct quotes are high-risk because models can produce authoritative-sounding quotes not grounded in fact.
+- **Why C:** Confident detail about post-cutoff events without live search is precisely where training-data gaps produce fabrication.
+- **Why not B/D:** Style and length properties with no bearing on truth.
+- **Why not E:** The *opposite* of a warning sign — admitting uncertainty and recommending verification is desired behavior.
 
-**Q7 — A, B, and D.** All three are documented Anthropic techniques: permitting "I don't know" reduces false information; quote-first grounding anchors long-document tasks in the actual text; per-claim citations with retraction of unsupported claims make outputs auditable. (C) uses self-reported confidence as an acceptance gate, which official guidance and the exam's own sample rationale reject. (E) is complacency, not a technique — past success does not validate future outputs.
+**Q4 — Correct: C**
 
-**Q8 — B.** The guide is significant, self-contained, will be edited and iterated across rounds, and will be reused as a standalone document — matching the published artifact criteria point for point, with versioning and export supporting the revision workflow. (A) scatters a living document across chat history. (C) applies a machine-oriented structured format to human-read prose. (D) fragments one deliverable and multiplies inconsistency risk across contexts.
+- **Why C:** Three mutually contradictory figures mean at least two are wrong; the fix is to resolve the truth from the underlying analysis and make the document consistent with it.
+- **Why not A/B:** Pick or invent a number without establishing which is correct — averaging contradictions manufactures a fourth wrong number.
+- **Why not D:** Achieves consistency by destroying the information the document exists to convey.
 
-**Q9 — B.** Summarization is a new generation pass; numbers and claims can change in the rewrite, so the adaptation must be re-checked against the validated source before it goes to decision-makers. (A) and (C) are cosmetic checks that do not address correctness. (D) is the trap: validation of the *original* does not transfer automatically to a *derived* output.
+**Q5 — Correct: B**
 
-**Q10 — B.** The failure is completeness — required scope silently dropped — and the remedy is targeted: obtain the missing section, then confirm the whole now matches the original request. (A) over-rotates; a scope gap does not invalidate verified content already checked. (C) misuses the term hallucination — nothing was fabricated. (D) normalizes silent scope loss, which is exactly what completeness evaluation exists to catch.
+- **Why B:** The language is age-coded and gender-exclusionary; drafted hiring content is a category where bias identification and human review before publication are required.
+- **Why not A:** Biased output can arise regardless of prompt neutrality — evaluation is about the output, not the intent.
+- **Why not C:** Wrongly narrows the associate's role; identifying bias in drafted content is an explicit exam objective.
+- **Why not D:** Treats publication as the test environment and externalizes the harm.
+
+**Q6 — Correct: B**
+
+- **Why B:** Contract language carries legal consequences; this is a defining case for escalation to a qualified human expert regardless of how clean the output-level checks were.
+- **Why not A:** Confuses necessary checks with sufficient ones.
+- **Why not C:** Still model self-review — a second model instance is not a qualified reviewer for legal liability.
+- **Why not D:** A disclaimer, not a control; labeling the clause does not validate it.
+
+**Q7 — Correct: A, B, and D**
+
+- **Why A, B, and D:** All three are documented Anthropic techniques: permitting "I don't know" reduces false information; quote-first grounding anchors long-document tasks in the actual text; per-claim citations with retraction of unsupported claims make outputs auditable.
+- **Why not C:** Uses self-reported confidence as an acceptance gate, which official guidance and the exam's own sample rationale reject.
+- **Why not E:** Complacency, not a technique — past success does not validate future outputs.
+
+**Q8 — Correct: B**
+
+- **Why B:** The guide is significant, self-contained, will be edited and iterated across rounds, and will be reused as a standalone document — matching the published artifact criteria point for point, with versioning and export supporting the revision workflow.
+- **Why not A:** Scatters a living document across chat history.
+- **Why not C:** Applies a machine-oriented structured format to human-read prose.
+- **Why not D:** Fragments one deliverable and multiplies inconsistency risk across contexts.
+
+**Q9 — Correct: B**
+
+- **Why B:** Summarization is a new generation pass; numbers and claims can change in the rewrite, so the adaptation must be re-checked against the validated source before it goes to decision-makers.
+- **Why not A/C:** Cosmetic checks that do not address correctness.
+- **Why not D:** The trap: validation of the *original* does not transfer automatically to a *derived* output.
+
+**Q10 — Correct: B**
+
+- **Why B:** The failure is completeness — required scope silently dropped — and the remedy is targeted: obtain the missing section, then confirm the whole now matches the original request.
+- **Why not A:** Over-rotates; a scope gap does not invalidate verified content already checked.
+- **Why not C:** Misuses the term hallucination — nothing was fabricated.
+- **Why not D:** Normalizes silent scope loss, which is exactly what completeness evaluation exists to catch.
 
 ---
 
