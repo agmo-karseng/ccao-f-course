@@ -1,0 +1,5 @@
+remote_theme: just-the-docs/just-the-docs
+title: CCAO-F Trainer Course
+description: A complete training course for the Claude Certified Associate – Foundations (CCAO-F) exam
+search_enabled: true
+heading_anchors: true
