@@ -45,6 +45,7 @@ Two configuration surfaces matter for the exam:
 
 1. **Project knowledge** — files and content you upload to the project's knowledge base.
    Claude uses this material as context **across all chats within that project**.
+
 2. **Project instructions** — behavioral guidance you set once per project ("Set project
    instructions" in the project). Claude applies these instructions to **every chat in
    that project** — for example, using a more formal tone or answering from the
@@ -55,6 +56,7 @@ Two details that exam items like to probe:
 - The project **name and description are organizational metadata only — Claude does not
   have access to them**. If Claude needs to know something, it must be in the
   instructions or the knowledge base, not the project title.
+
 - **Context is not shared across chats within a project** unless the information is added
   to the project knowledge base. Each chat starts fresh; the knowledge base and
   instructions are what persist.
@@ -96,6 +98,7 @@ Rules of thumb to teach:
 - **Instructions describe *how to behave*; knowledge supplies *what to know*.**
 - Keep instructions short, specific, and testable ("structure replies as X" is testable;
   "be professional" is not).
+
 - Point instructions *at* knowledge files by name so Claude knows what each file is for.
 - Include negative constraints ("never invent pricing") and escalation guidance — this
   connects to Domain 6 (responsible use).
@@ -121,8 +124,10 @@ On Claude for Work (Team and Enterprise) plans, projects can be shared:
 - **Permission levels:** *Can use* (see contents, knowledge, and instructions, and chat —
   but not edit) vs. *Can edit* (modify instructions and knowledge, manage members,
   contribute).
+
 - **Sharing options:** individual sharing by email, bulk sharing via email lists, or
   organization-wide sharing (which an Owner/Primary Owner can disable org-wide).
+
 - Shared projects appear in a **"Shared with me"** tab, with email notifications.
 - **Archiving a project resets all sharing permissions to private** and wipes prior
   sharing context for security. Archived projects cannot be deleted until unarchived.
@@ -143,6 +148,7 @@ actions within connected services**. Two governing principles from the Help Cent
    connected service. If you can't access a file, channel, or record in the source
    system, the connector can't reach it from Claude either. Restrictions in Claude can
    *narrow* access but never *grant more* than the source system permits.
+
 2. **Explicit setup and authentication:** you browse the Connectors Directory, connect,
    and authenticate with the service. On Team and Enterprise plans, an Owner or Primary
    Owner must first enable a connector at the organization level, and **each user still
@@ -159,31 +165,40 @@ The Gmail, Google Calendar, and Google Drive connectors are available for all us
 Claude and Claude Desktop. Key verified capabilities and limits:
 
 **Gmail**
+
 - Search and read emails with natural-language queries.
 - **Draft** emails — Claude creates drafts in your Gmail account but **cannot send
   emails on your behalf**; all sending is manual in Gmail. (Google's OAuth screen may
   mention send permissions, but the send function is not enabled.)
+
 - Access email metadata, including attachment metadata — **not attachment content**.
 - Manage labels and threads; list saved drafts.
 
 **Google Calendar**
+
 - View events and calendars; create, update, and delete events; find mutual
   availability; manage attendees and respond to invitations; set up recurring meetings.
 
 **Google Drive**
+
 - Search and retrieve Google Docs; read Sheets, Slides, PDFs, images, and MS Office
   files; upload files; create folders; view permissions; list recent changes.
+
 - **Add Google Docs directly to chats and projects** by pasting URLs or selecting recent
   documents. Docs added this way **sync directly from Google Drive**, so Claude always
   works with the latest version — unlike a static file upload.
+
 - Claude extracts **text content only**: embedded images, comments, and suggestions in
   Docs are not processed.
+
 - In Projects, the Google Drive connector is only available when adding to Files in
   **private** projects — the option is disabled for shared projects.
 
 **Cross-cutting behaviors**
+
 - Claude automatically detects which connector tools a request needs; **each action
   Claude takes on your behalf requires your explicit approval**.
+
 - Responses include **citations** to the emails, events, or documents used as sources.
 - Claude retrieves the minimum information needed, only when you ask something that
   requires it; retrieved data is stored with the chat (delete the chat to delete it),
@@ -203,17 +218,22 @@ to a repo, its preview disappears from the project, though chat history remains.
 
 - **Least footprint:** connect only the services you actually need; the Help Center
   advises disconnecting services you no longer use.
+
 - **Review scopes at connect time:** check what access the service requests before
   approving.
+
 - **Restrict actions (Team/Enterprise):** Owners can set org-wide tool permissions per
   connector — *Always allow*, *Needs approval*, or *Blocked* per permission category —
   e.g., allow Claude to search and summarize email but block sending; allow reading
   Drive files but block creating or editing. Individual users can't override org
   restrictions.
+
 - **Mind context load:** with roughly 10 or more connectors active, switch the Tool
   access mode from the default *Auto* to *On demand* to give conversations more room.
+
 - **Sharing boundaries (Team/Enterprise):** connectors are only available in private
   projects, and chats with synced content can't be shared.
+
 - **Third-party processing:** connected services process data on their own
   infrastructure under their own terms — org settings that control where *Claude's*
   inference runs do not change where third-party services operate.
@@ -241,12 +261,16 @@ retype daily should be promoted to project instructions.
 
 1. **Specific and behavioral.** "Open every draft with a one-sentence summary" beats
    "write clearly."
+
 2. **Scoped correctly.** Account-wide = things true of *you* everywhere (role,
    terminology, tone). Project = things true of *this work*.
+
 3. **Prioritized.** When instructions could conflict, say which wins ("If the client
    style guide conflicts with these instructions, follow the style guide").
+
 4. **Bounded.** Include what Claude should *not* do and when to defer to a human —
    e.g., "flag, don't fix, anything that looks like a legal claim."
+
 5. **Maintained.** Instructions are configuration, not prose art: date them, review them
    when the underlying process changes (see 5.4).
 
@@ -254,11 +278,14 @@ retype daily should be promoted to project instructions.
 
 - **Stuffing knowledge into instructions:** pasting a 40-page policy into project
   instructions instead of uploading it to project knowledge and referencing it.
+
 - **Contradictory layers:** account instructions say "be brief," project instructions
   say "be exhaustive," and nobody said which wins.
+
 - **Untestable adjectives:** "be smart, insightful, and world-class."
 - **Relying on the project title:** remember, Claude cannot see the project name or
   description.
+
 - **Expecting cross-chat carryover:** deciding something in one project chat and
   assuming other chats in the project now know it. They don't — update the instructions
   or knowledge base.
@@ -271,14 +298,18 @@ Verified behaviors worth knowing for the exam:
 
 - The memory synthesis is **updated every 24 hours**; you can also tell Claude in-chat
   what to remember, which applies immediately to your next conversation.
+
 - **Each project has its own separate memory space and summary**, distinct from
   non-project chats — moving a chat into or out of a project changes which summary it
   feeds.
+
 - Users can **view and edit** the memory summary (Settings > Capabilities > "View and
   edit memory"), **pause** memory (kept but unused), or **reset** it (permanent,
   irreversible deletion, including project memories).
+
 - **Incognito chats** are not saved to history, don't contribute to memory, and aren't
   pulled into past-chat searches.
+
 - Enterprise Owners can disable memory org-wide; doing so **permanently deletes all
   memory data for all users** in the organization. (Plan availability for memory and
   chat search has shifted over time — check the current help article.)
@@ -302,13 +333,16 @@ Claude's context trustworthy over time*.
   (e.g., quarterly), re-upload changed documents and **remove superseded versions** —
   outdated knowledge is worse than missing knowledge because Claude will confidently
   use it.
+
 - **Prefer syncing sources for volatile content.** Google Docs added via the Drive
   connector sync to the latest version automatically; GitHub project knowledge updates
   when you click Sync. For fast-changing material, a synced source beats a static
   upload; for point-in-time material (a signed contract), a static upload is correct.
+
 - **Name and describe files meaningfully** and reference them from the project
   instructions so users (and Claude) know what each source is for and which is
   authoritative.
+
 - **Prune.** Anthropic's GitHub guidance applies generally: avoid unnecessary files to
   stay within token limits and keep the project focused. On paid plans RAG expands
   capacity, but irrelevant content still degrades focus and makes maintenance harder.
@@ -317,9 +351,11 @@ Claude's context trustworthy over time*.
 
 - Treat instructions like versioned configuration: keep a change log (even a dated line
   at the top), and update them when the team's workflow, audience, or standards change.
+
 - In shared projects, restrict *Can edit* to designated maintainers; everyone else gets
   *Can use*. Remember that **archiving resets sharing to private** — re-share
   deliberately if you unarchive.
+
 - When behavior drifts (Claude stops following an instruction it used to follow), first
   check for **conflicts between layers** and for knowledge files that contradict the
   instructions — then simplify.
@@ -328,9 +364,11 @@ Claude's context trustworthy over time*.
 
 - Periodically review Customize > Connectors: disconnect unused services; re-check tool
   permissions after org policy changes.
+
 - If a connected document or repo becomes inaccessible (permissions revoked), its
   content stops being viewable in the project — previews are removed while chat history
   remains. Broken sources should be replaced or removed, not left dangling.
+
 - After team changes (offboarding, role changes), verify project sharing lists and
   connector authorizations still match reality.
 
@@ -351,14 +389,18 @@ users find them in "Shared with me" and get email notifications when added.
 - **Anchor everything to the two-question test:** "Is this *how to behave* (instruction)
   or *what to know* (knowledge)? Is it needed *everywhere* (account), *in this project*
   (project), or *just now* (chat)?" Most Domain 5 items reduce to these two questions.
+
 - Show, don't tell: put a weak instruction set and a strong one side by side and have
   the class predict failure modes of the weak one before revealing them.
+
 - Use the Gmail "draft but never send" behavior and the "each action needs explicit
   approval" pattern as memorable examples of Anthropic's human-in-the-loop design —
   they recur as correct-answer logic in connector questions.
+
 - Be candid that plan availability and UI labels change; teach the *concepts*
   (permission inheritance, sync vs. static, scope layering) as the durable knowledge
   and the Help Center as the source of truth for details.
+
 - Cross-link domains: connector permissions and data handling foreshadow Domain 6;
   "why is Claude ignoring my instruction?" foreshadows Domain 7.
 
@@ -366,15 +408,19 @@ users find them in "Shared with me" and get email notifications when added.
 
 1. Your team pasted the entire employee handbook into project instructions "so Claude
    never forgets it." What problems do you predict, and how would you restructure it?
+
 2. A colleague wants to connect Gmail and Drive to a *shared* Team-plan project so
    everyone can use their mailbox context. What actually happens, and what would you
    propose instead? (Hint: connectors are only available in private projects on
    Team/Enterprise, and permission inheritance means each user only sees their own data.)
+
 3. When is a static file upload *better* than a synced Google Doc as a knowledge
    source? When is it worse? Give one real example of each from your own work.
+
 4. Memory, account-wide instructions, project instructions, project knowledge: for each,
    name one piece of information from your job that belongs there — and one that
    definitely does not.
+
 5. An Enterprise Owner is considering disabling memory org-wide. What are the
    irreversible consequences, and what would you want them to communicate first?
 
@@ -382,17 +428,23 @@ users find them in "Shared with me" and get email notifications when added.
 
 - **"Claude reads the project name and description."** It does not — that metadata is
   for humans. Context must be in instructions or knowledge.
+
 - **"Chats inside a project share context with each other."** They don't; only project
   knowledge and instructions persist across a project's chats.
+
 - **"Connecting Gmail lets Claude send email for me."** Verified: Claude creates drafts
   only; sending is always manual.
+
 - **"A connector can reach files I can't."** Never — Claude inherits your permissions
   from the source system; Claude-side restrictions only narrow access further.
+
 - **"Uploaded knowledge stays current."** Static uploads are snapshots; only connector-
   synced sources (e.g., Google Docs, GitHub with Sync) track the source.
+
 - **"Memory is a reliable place for must-follow rules."** Memory is inferred and
   editable but not a compliance mechanism; hard requirements belong in explicit
   instructions.
+
 - **"Instructions and knowledge are interchangeable."** Instructions steer behavior;
   knowledge supplies facts. Misplacing one as the other is the classic Domain 5 error.
 
@@ -401,16 +453,20 @@ users find them in "Shared with me" and get email notifications when added.
 1. **Scenario (5 min):** the class is the "RFP Response Desk" for a fictional agency.
    Provide three seed files: a style guide, a boilerplate company profile, and last
    quarter's (now partly outdated) pricing sheet.
+
 2. **Build (10 min):** live-create a Project. Have the class dictate project
    instructions; deliberately accept a bad first draft ("be professional and use our
    documents"), run a test prompt, critique the output.
+
 3. **Iterate (10 min):** rewrite instructions with role, audience, format, file
    references, and a "never invent pricing; flag for account manager" constraint.
    Upload the two stable files to project knowledge; keep a sample RFP as a
    *single-chat* upload and discuss why it doesn't go in knowledge.
+
 4. **Maintenance twist (5–10 min):** announce "pricing changed this morning." Ask the
    class what must happen (remove/replace the stale sheet; note why a synced Google Doc
    might have been the better choice; who on a shared project has *Can edit* to do it).
+
 5. **Debrief:** map each step back to the four blueprint objectives.
 
 ---
@@ -426,65 +482,73 @@ Follow the escalation rules in the description" and writes detailed escalation r
 the project description field. In chats, Claude never applies the rules. What is the
 most likely cause?
 
-A. The project needs to be archived and unarchived to refresh its configuration.
-B. Claude does not have access to the project name or description; the rules must go in
+- A. The project needs to be archived and unarchived to refresh its configuration.
+- B. Claude does not have access to the project name or description; the rules must go in
 project instructions or knowledge.
-C. Escalation rules are only supported on Enterprise plans.
-D. The rules must be repeated in every chat because projects cannot store instructions.
+
+- C. Escalation rules are only supported on Enterprise plans.
+- D. The rules must be repeated in every chat because projects cannot store instructions.
 
 **Q2.** (Select ONE) A marketing team keeps a 60-page brand guide, a glossary, and
 each week's one-off campaign brief. Which placement best follows configuration best
 practices?
 
-A. Paste all three into project instructions so they are never forgotten.
-B. Upload all three to project knowledge, replacing the campaign brief weekly.
-C. Put the brand guide and glossary in project knowledge, keep the weekly brief as a
+- A. Paste all three into project instructions so they are never forgotten.
+- B. Upload all three to project knowledge, replacing the campaign brief weekly.
+- C. Put the brand guide and glossary in project knowledge, keep the weekly brief as a
 single-chat upload, and use project instructions to define tone, format, and how to use
 the knowledge files.
-D. Attach all three files to each individual chat to keep the project lightweight.
+
+- D. Attach all three files to each individual chat to keep the project lightweight.
 
 **Q3.** (Select ONE) An associate connects the Gmail connector and asks Claude to
 "reply to the client confirming the meeting." What will Claude do?
 
-A. Send the reply immediately from the associate's Gmail address.
-B. Send the reply only after the associate approves the send action in Claude.
-C. Create a draft in the associate's Gmail account; the associate must send it manually
+- A. Send the reply immediately from the associate's Gmail address.
+- B. Send the reply only after the associate approves the send action in Claude.
+- C. Create a draft in the associate's Gmail account; the associate must send it manually
 from Gmail.
-D. Refuse, because the Gmail connector is read-only.
+
+- D. Refuse, because the Gmail connector is read-only.
 
 **Q4.** (Select ONE) On a Team plan, an Owner enables the Google Drive connector for
 the organization. A new analyst opens Claude and asks it to search Drive, but nothing is
 retrieved. What is the most likely reason?
 
-A. Drive connectors require an Enterprise plan.
-B. The analyst has not yet authenticated individually with their Google account;
+- A. Drive connectors require an Enterprise plan.
+- B. The analyst has not yet authenticated individually with their Google account;
 enabling a connector at the org level does not grant user access by itself.
-C. The Owner must also upload the analyst's Drive files to a shared project.
-D. Claude can only access Drive files created after the connector was enabled.
+
+- C. The Owner must also upload the analyst's Drive files to a shared project.
+- D. Claude can only access Drive files created after the connector was enabled.
 
 **Q5.** (Select TWO) A compliance officer wants Claude to help staff summarize email
 and reference policy documents, while minimizing the risk of Claude modifying anything
 in connected systems. Which TWO measures directly support this on a Team/Enterprise
 plan?
 
-A. Configure org-wide tool permissions on the connectors so write/delete actions are
+- A. Configure org-wide tool permissions on the connectors so write/delete actions are
 Blocked or Needs approval while read tools remain allowed.
-B. Ask each user to add "please don't modify anything" to their account-wide
+
+- B. Ask each user to add "please don't modify anything" to their account-wide
 instructions as the enforcement mechanism.
-C. Rely on the fact that Claude inherits each user's source-system permissions, and
+
+- C. Rely on the fact that Claude inherits each user's source-system permissions, and
 disconnect connectors that are no longer needed.
-D. Enable memory so Claude remembers not to modify systems.
-E. Share one manager's authenticated connector session with the whole team.
+
+- D. Enable memory so Claude remembers not to modify systems.
+- E. Share one manager's authenticated connector session with the whole team.
 
 **Q6.** (Select ONE) A project's knowledge base contains a pricing PDF uploaded in
 January and a pricing Google Doc added via the Drive connector. Prices changed in June.
 In July, which statement is accurate?
 
-A. Both sources reflect June prices, because project knowledge refreshes automatically.
-B. Neither source reflects June prices until the project is re-created.
-C. The Google Doc reflects the latest version because connector-added Docs sync from
+- A. Both sources reflect June prices, because project knowledge refreshes automatically.
+- B. Neither source reflects June prices until the project is re-created.
+- C. The Google Doc reflects the latest version because connector-added Docs sync from
 Drive, while the static PDF still shows January prices and should be replaced or removed.
-D. The PDF updates automatically, but the Google Doc is frozen at the moment it was
+
+- D. The PDF updates automatically, but the Google Doc is frozen at the moment it was
 added.
 
 **Q7.** (Select ONE) A consultant wants Claude to always use her preferred
@@ -492,22 +556,24 @@ methodology terminology in every conversation, and additionally to adopt a stric
 plain-language style only for chats in her "Community Newsletter" project. What is the
 best configuration?
 
-A. Put both requirements in the newsletter project's instructions.
-B. Put both requirements in account-wide "Instructions for Claude."
-C. Put the terminology preference in account-wide instructions and the plain-language
+- A. Put both requirements in the newsletter project's instructions.
+- B. Put both requirements in account-wide "Instructions for Claude."
+- C. Put the terminology preference in account-wide instructions and the plain-language
 requirement in the newsletter project's instructions.
-D. Repeat both requirements at the start of every chat, since persistent instructions
+
+- D. Repeat both requirements at the start of every chat, since persistent instructions
 are unreliable.
 
 **Q8.** (Select ONE) In one chat inside a project, a team agrees with Claude on a new
 report format. The next day, a colleague opens a new chat in the same project and Claude
 uses the old format. What is the most appropriate fix?
 
-A. Report the issue as a memory synchronization bug.
-B. Update the project instructions (or add the format spec to project knowledge), since
+- A. Report the issue as a memory synchronization bug.
+- B. Update the project instructions (or add the format spec to project knowledge), since
 context from one chat does not carry over to other chats in the project.
-C. Tell the colleague to continue working inside the original chat forever.
-D. Reset Claude's memory so it rebuilds with the new format.
+
+- C. Tell the colleague to continue working inside the original chat forever.
+- D. Reset Claude's memory so it rebuilds with the new format.
 
 ### Answers
 

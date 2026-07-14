@@ -253,67 +253,67 @@ Debrief by mapping each group's answer to the objectives: use-case screen (6.1),
 
 **Q1.** An operations associate wants Claude to analyze a spreadsheet of employee salaries, names, and bank details to find payroll anomalies. Company policy prohibits sharing regulated personal data with external services. What is the most appropriate action?
 
-A. Upload the file, since payroll review is a legitimate business purpose.
-B. Replace names and bank details with anonymous IDs, remove unneeded fields, then upload for analysis.
-C. Upload the file but add a prompt instructing Claude to delete the data afterward.
-D. Conclude that Claude cannot be used for any payroll-related work.
+- A. Upload the file, since payroll review is a legitimate business purpose.
+- B. Replace names and bank details with anonymous IDs, remove unneeded fields, then upload for analysis.
+- C. Upload the file but add a prompt instructing Claude to delete the data afterward.
+- D. Conclude that Claude cannot be used for any payroll-related work.
 
 **Q2.** A financial services firm plans to use Claude to generate personalized investment recommendations delivered directly to retail customers. Under Anthropic's Usage Policy guidance for high-risk use cases, which TWO measures are required? (Select TWO.)
 
-A. A qualified professional reviews the advice before it reaches customers.
-B. Recommendations are limited to 500 words each.
-C. Customers are told that AI is used to help produce the recommendations.
-D. The firm uses only the fastest available model to reduce cost.
-E. Customer names are converted to uppercase before processing.
+- A. A qualified professional reviews the advice before it reaches customers.
+- B. Recommendations are limited to 500 words each.
+- C. Customers are told that AI is used to help produce the recommendations.
+- D. The firm uses only the fastest available model to reduce cost.
+- E. Customer names are converted to uppercase before processing.
 
 **Q3.** A marketing manager asks an associate to use Claude to write dozens of five-star product reviews to post on retail sites, written as if from real customers. What should the associate do?
 
-A. Comply, since promoting the company's own product is a normal marketing task.
-B. Comply, but disclose the reviews internally to the legal team afterward.
-C. Decline and explain that generating fake reviews is a deceptive practice prohibited by Anthropic's Usage Policy, and propose compliant alternatives such as drafting requests inviting real customers to review.
-D. Use a personal account so the company workspace is not implicated.
+- A. Comply, since promoting the company's own product is a normal marketing task.
+- B. Comply, but disclose the reviews internally to the legal team afterward.
+- C. Decline and explain that generating fake reviews is a deceptive practice prohibited by Anthropic's Usage Policy, and propose compliant alternatives such as drafting requests inviting real customers to review.
+- D. Use a personal account so the company workspace is not implicated.
 
 **Q4.** An associate's organization has an approved Claude Enterprise workspace. The associate finds it more convenient to use a personal Claude Pro account for summarizing internal strategy documents. What is the primary governance problem?
 
-A. Personal accounts produce lower-quality summaries.
-B. Company data leaves the organization's sanctioned environment, losing its contractual protections, admin controls, and data-handling settings — and consumer plans have different training-data defaults.
-C. The Enterprise workspace is always cheaper per message.
-D. Personal accounts cannot upload files.
+- A. Personal accounts produce lower-quality summaries.
+- B. Company data leaves the organization's sanctioned environment, losing its contractual protections, admin controls, and data-handling settings — and consumer plans have different training-data defaults.
+- C. The Enterprise workspace is always cheaper per message.
+- D. Personal accounts cannot upload files.
 
 **Q5.** While preparing a dataset, an associate realizes a colleague already uploaded a file containing customer health information to Claude last week, against policy. What is the most appropriate first action?
 
-A. Quietly delete the conversation and say nothing, since the risk has passed.
-B. Report the incident through the organization's incident/escalation process so it can be assessed and remediated.
-C. Wait to see whether anyone notices before deciding what to do.
-D. Post a warning in the team channel naming the colleague.
+- A. Quietly delete the conversation and say nothing, since the risk has passed.
+- B. Report the incident through the organization's incident/escalation process so it can be assessed and remediated.
+- C. Wait to see whether anyone notices before deciding what to do.
+- D. Post a warning in the team channel naming the colleague.
 
 **Q6.** A company deploys a Claude-powered chatbot on its public website to answer customer questions. According to Anthropic's Usage Policy guidance for consumer-facing chatbots, what must the company do?
 
-A. Disclose to users that they are interacting with AI rather than a human, at minimum at the start of each chat session.
-B. Give the chatbot a human name and persona to build trust.
-C. Restrict the chatbot to business hours.
-D. Route every single response through a lawyer before it is sent.
+- A. Disclose to users that they are interacting with AI rather than a human, at minimum at the start of each chat session.
+- B. Give the chatbot a human name and persona to build trust.
+- C. Restrict the chatbot to business hours.
+- D. Route every single response through a lawyer before it is sent.
 
 **Q7.** An HR team uses Claude to summarize candidate résumés into a comparison table, and a recruiter reads each summary and the underlying résumé before any decision. Which additional ethical risk most needs ongoing attention in this workflow?
 
-A. The summaries may be too short to be useful.
-B. The model may reflect or amplify bias in how it characterizes candidates, so outputs should be monitored for skewed patterns across demographic groups.
-C. Claude may refuse to summarize résumés.
-D. The table format may not match the company's brand colors.
+- A. The summaries may be too short to be useful.
+- B. The model may reflect or amplify bias in how it characterizes candidates, so outputs should be monitored for skewed patterns across demographic groups.
+- C. Claude may refuse to summarize résumés.
+- D. The table format may not match the company's brand colors.
 
 **Q8.** An associate's team has begun approving Claude-drafted client advisory notes so quickly that the review step averages under 20 seconds per note, with no edits in months. From a governance standpoint, what is the main concern?
 
-A. The team is wasting time on an unnecessary review step.
-B. Automation bias has hollowed out the human-in-the-loop control — review exists on paper but no longer provides genuine oversight or accountability.
-C. Claude's drafts should be slowed down to match review speed.
-D. The team should switch to a more expensive model so reviews feel more substantial.
+- A. The team is wasting time on an unnecessary review step.
+- B. Automation bias has hollowed out the human-in-the-loop control — review exists on paper but no longer provides genuine oversight or accountability.
+- C. Claude's drafts should be slowed down to match review speed.
+- D. The team should switch to a more expensive model so reviews feel more substantial.
 
 **Q9.** An organization's AI policy is silent about connecting Claude to a third-party cloud-storage connector that would give it access to a shared drive containing client contracts. What is the most appropriate action?
 
-A. Enable the connector, since the policy does not explicitly forbid it.
-B. Enable the connector but only during off-peak hours.
-C. Ask the policy owner or governance contact for approval first, noting that connectors send data to third-party services governed by their own privacy policies.
-D. Manually paste the contracts into the chat instead, to avoid the connector question.
+- A. Enable the connector, since the policy does not explicitly forbid it.
+- B. Enable the connector but only during off-peak hours.
+- C. Ask the policy owner or governance contact for approval first, noting that connectors send data to third-party services governed by their own privacy policies.
+- D. Manually paste the contracts into the chat instead, to avoid the connector question.
 
 ### Answers
 

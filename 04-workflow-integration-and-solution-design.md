@@ -201,6 +201,7 @@ A simple three-part structure for any stakeholder conversation, memo, or demo:
    - **Data policies constrain inputs** — some information may not be shareable with the tool under organizational policy.
    - Quality is **variable and prompt-dependent**; the workflow includes review for a reason.
    - Usage operates within **plan limits**, and heavy features like Research consume limits faster — so the design accounts for capacity, not unlimited use.
+
 3. **Controls** — Show the safeguards that make the limits manageable: named human reviewers, verification steps for cited facts, read-only connector permissions where appropriate, documented instructions, and an escalation path.
 
 This framing works because it answers the three questions every sponsor actually has: *What do we gain? What could go wrong? What are you doing about it?*
@@ -260,67 +261,67 @@ Part of honest communication is being clear about **what you are not offering**.
 
 **Q1.** An operations manager asks an Associate to "get AI into our invoice-handling process." What is the most appropriate first step?
 
-A. Configure a Project immediately and upload all invoice records so Claude can begin processing.
-B. Map the process into individual steps and identify which involve routine language or information tasks versus human judgment.
-C. Tell the manager invoice handling is a financial process and therefore unsuitable for Claude.
-D. Ask engineering to build an automated invoice pipeline against the API.
+- A. Configure a Project immediately and upload all invoice records so Claude can begin processing.
+- B. Map the process into individual steps and identify which involve routine language or information tasks versus human judgment.
+- C. Tell the manager invoice handling is a financial process and therefore unsuitable for Claude.
+- D. Ask engineering to build an automated invoice pipeline against the API.
 
 **Q2.** A project manager has stakeholder interview notes that are vague and partly contradictory. Which use of Claude best supports requirements analysis at this stage?
 
-A. Ask Claude to write the final requirements document so the project can start on schedule.
-B. Ask Claude to restate the problem, extract explicit and implicit requirements, and list ambiguities as questions to take back to stakeholders.
-C. Ask Claude to decide which stakeholder's version of the requirements is correct.
-D. Skip requirements analysis; iterate on the solution until stakeholders stop complaining.
+- A. Ask Claude to write the final requirements document so the project can start on schedule.
+- B. Ask Claude to restate the problem, extract explicit and implicit requirements, and list ambiguities as questions to take back to stakeholders.
+- C. Ask Claude to decide which stakeholder's version of the requirements is correct.
+- D. Skip requirements analysis; iterate on the solution until stakeholders stop complaining.
 
 **Q3.** An Associate needs a comprehensive competitive analysis synthesizing many web sources plus the company's internal strategy documents into a cited report. Which approach best fits the task?
 
-A. Web search, since the question involves current information.
-B. Extended thinking alone, so Claude can reason deeply without outside distraction.
-C. The Research capability, with the relevant workspace integration connected, so Claude can agentically search across the web and internal context and produce a cited report.
-D. A plain chat with no features enabled, to conserve usage limits.
+- A. Web search, since the question involves current information.
+- B. Extended thinking alone, so Claude can reason deeply without outside distraction.
+- C. The Research capability, with the relevant workspace integration connected, so Claude can agentically search across the web and internal context and produce a cited report.
+- D. A plain chat with no features enabled, to conserve usage limits.
 
 **Q4.** After Claude's Research feature produces a well-cited market report, what should the Associate do before including its findings in a board presentation?
 
-A. Present it as-is; the citations demonstrate the content has been verified.
-B. Ask Claude whether the report is accurate and proceed if it says yes.
-C. Spot-check key claims against the cited sources and verify the figures that carry decision weight.
-D. Remove the citations so the deck looks cleaner.
+- A. Present it as-is; the citations demonstrate the content has been verified.
+- B. Ask Claude whether the report is accurate and proceed if it says yes.
+- C. Spot-check key claims against the cited sources and verify the figures that carry decision weight.
+- D. Remove the citations so the deck looks cleaner.
 
 **Q5.** A communications team's editorial process works well but drafting is slow. The team is stretched thin, and other departments depend on the current output formats. Leadership wants improvement this quarter. Which approach is most appropriate?
 
-A. Redesign the entire workflow around Claude immediately to maximize impact.
-B. Augment the existing workflow by adding Claude at the drafting step, keep review and approval unchanged, and measure results before considering broader redesign.
-C. Decline to change anything until a full enterprise AI architecture is in place.
-D. Replace the editors with Claude-generated output to free capacity fastest.
+- A. Redesign the entire workflow around Claude immediately to maximize impact.
+- B. Augment the existing workflow by adding Claude at the drafting step, keep review and approval unchanged, and measure results before considering broader redesign.
+- C. Decline to change anything until a full enterprise AI architecture is in place.
+- D. Replace the editors with Claude-generated output to free capacity fastest.
 
 **Q6.** An Associate is designing a report template with Claude and expects several rounds of stakeholder feedback. Which practice best supports this iteration? 
 
-A. Start a brand-new conversation for every feedback round so old versions can't cause confusion.
-B. Give feedback like "make it better overall" so Claude has creative freedom.
-C. Work in an artifact, give specific concrete change requests each round, and use versioning to preserve and compare iterations.
-D. Collect all feedback for six weeks and apply it in a single final rewrite.
+- A. Start a brand-new conversation for every feedback round so old versions can't cause confusion.
+- B. Give feedback like "make it better overall" so Claude has creative freedom.
+- C. Work in an artifact, give specific concrete change requests each round, and use versioning to preserve and compare iterations.
+- D. Collect all feedback for six weeks and apply it in a single final rewrite.
 
 **Q7.** A sponsor asks an Associate to pitch a Claude-assisted client-briefing workflow to the leadership team. Which pitch best reflects appropriate stakeholder communication?
 
-A. "Claude eliminates errors and will fully automate briefings, so no staff review will be needed."
-B. "Briefing prep time dropped from four hours to one in our pilot. Outputs can contain errors, so a named reviewer verifies facts before anything is sent, and the email connector is limited to read-only access."
-C. "The AI details are too technical to explain; leadership should simply trust the results."
-D. "There are significant risks, so we recommend not discussing limitations to avoid alarming anyone."
+- A. "Claude eliminates errors and will fully automate briefings, so no staff review will be needed."
+- B. "Briefing prep time dropped from four hours to one in our pilot. Outputs can contain errors, so a named reviewer verifies facts before anything is sent, and the email connector is limited to read-only access."
+- C. "The AI details are too technical to explain; leadership should simply trust the results."
+- D. "There are significant risks, so we recommend not discussing limitations to avoid alarming anyone."
 
 **Q8. (Multiple response — select TWO.)** Which of the following requests signal that work has moved beyond Associate scope and should be escalated toward Claude Architect / Developer expertise? (Choose 2.)
 
-A. A team wants a shared Project configured with instructions and a curated knowledge base for consistent report drafting.
-B. A director wants an unattended, API-driven pipeline that processes thousands of documents nightly across three internal systems.
-C. A colleague wants help iterating a slide-outline prompt to improve draft quality.
-D. IT asks for a custom-built integration server to connect Claude to a proprietary internal platform not covered by available connectors.
-E. A manager wants Claude's Research feature used to prepare a cited market overview.
+- A. A team wants a shared Project configured with instructions and a curated knowledge base for consistent report drafting.
+- B. A director wants an unattended, API-driven pipeline that processes thousands of documents nightly across three internal systems.
+- C. A colleague wants help iterating a slide-outline prompt to improve draft quality.
+- D. IT asks for a custom-built integration server to connect Claude to a proprietary internal platform not covered by available connectors.
+- E. A manager wants Claude's Research feature used to prepare a cited market overview.
 
 **Q9.** A Team-plan organization is integrating Claude with its email and file-storage systems for a pilot, and the risk team is worried about unintended changes to source data. Which verified platform capability most directly addresses this concern?
 
-A. Instructing Claude in the prompt to "please be careful" with connected systems.
-B. Having org admins enable the connectors and restrict actions so Claude can read from the services but not write changes back, while each user's access still inherits their own source-system permissions.
-C. Sharing one privileged user's connector login across the whole team to simplify auditing.
-D. Avoiding connectors entirely and pasting customer data into chats instead.
+- A. Instructing Claude in the prompt to "please be careful" with connected systems.
+- B. Having org admins enable the connectors and restrict actions so Claude can read from the services but not write changes back, while each user's access still inherits their own source-system permissions.
+- C. Sharing one privileged user's connector login across the whole team to simplify auditing.
+- D. Avoiding connectors entirely and pasting customer data into chats instead.
 
 ### Answers
 

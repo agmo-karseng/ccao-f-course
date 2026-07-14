@@ -287,60 +287,60 @@ Anthropic's documented guidance for research-style work: **provide clear success
 
 **Q1.** A marketing associate asks Claude: "Write something about our product launch." The output is generic and unusable. Which revision best applies effective prompting practice? (Select ONE.)
 
-A. "Write something about our product launch. This is very important, do a good job."
-B. "Draft a 150-word launch announcement for existing customers of our invoicing app, highlighting the new auto-reminder feature and its main benefit (fewer late payments), with a friendly tone and one clear call to action to try it."
-C. "Write something about our product launch" submitted three times, keeping the best result.
-D. "You are the world's greatest marketer. Write something about our product launch."
+- A. "Write something about our product launch. This is very important, do a good job."
+- B. "Draft a 150-word launch announcement for existing customers of our invoicing app, highlighting the new auto-reminder feature and its main benefit (fewer late payments), with a friendly tone and one clear call to action to try it."
+- C. "Write something about our product launch" submitted three times, keeping the best result.
+- D. "You are the world's greatest marketer. Write something about our product launch."
 
 **Q2.** A project manager must produce a vendor-selection recommendation involving requirements analysis, scoring of three proposals, and a final memo. She wants to be able to correct Claude's understanding of the requirements before any scoring happens. Which approach best fits her need? (Select ONE.)
 
-A. One comprehensive prompt requesting the analysis, scoring, and memo together, since Claude handles multi-part requests.
-B. A sequence of prompts: first extract and confirm the requirements, review them, then request scoring against the corrected requirements, then request the memo.
-C. Asking Claude to write the memo first, then work backward to justify it with scores.
-D. Submitting the three proposals in three parallel chats and combining whichever outputs look best.
+- A. One comprehensive prompt requesting the analysis, scoring, and memo together, since Claude handles multi-part requests.
+- B. A sequence of prompts: first extract and confirm the requirements, review them, then request scoring against the corrected requirements, then request the memo.
+- C. Asking Claude to write the memo first, then work backward to justify it with scores.
+- D. Submitting the three proposals in three parallel chats and combining whichever outputs look best.
 
 **Q3.** An analyst asks Claude to assess a 40-page market report and gets a confident summary containing a statistic she cannot find in the report. Which TWO prompt changes most directly address this problem? (Select TWO.)
 
-A. Instruct Claude to quote the relevant passages verbatim, with locations, before stating conclusions.
-B. Explicitly permit Claude to say "the report does not address this" instead of inferring.
-C. Ask Claude to express more confidence so weak claims are filtered out.
-D. Shorten the prompt so Claude focuses better.
-E. Ask for the summary in a more formal register.
+- A. Instruct Claude to quote the relevant passages verbatim, with locations, before stating conclusions.
+- B. Explicitly permit Claude to say "the report does not address this" instead of inferring.
+- C. Ask Claude to express more confidence so weak claims are filtered out.
+- D. Shorten the prompt so Claude focuses better.
+- E. Ask for the summary in a more formal register.
 
 **Q4.** An associate's first draft prompt produced a report that was too technical for its executive audience. What is the most effective next step? (Select ONE.)
 
-A. Regenerate the response several times until a simpler version appears.
-B. Give targeted feedback specifying the audience and what to change — e.g., "Rewrite for executives with no technical background; keep the recommendations section as is."
-C. Start a new conversation with the identical prompt.
-D. Manually rewrite the whole report without changing the prompt, since prompts can't control tone.
+- A. Regenerate the response several times until a simpler version appears.
+- B. Give targeted feedback specifying the audience and what to change — e.g., "Rewrite for executives with no technical background; keep the recommendations section as is."
+- C. Start a new conversation with the identical prompt.
+- D. Manually rewrite the whole report without changing the prompt, since prompts can't control tone.
 
 **Q5.** A consultant is prompting Claude with a long client brief plus her instructions, examples, and a rubric, and Claude keeps confusing the client's text with her instructions. Which technique does Anthropic document for exactly this problem? (Select ONE.)
 
-A. Writing the entire prompt in capital letters for emphasis.
-B. Separating each kind of content with clearly named XML-style tags such as `<instructions>`, `<context>`, and `<input>`.
-C. Removing the examples, since examples always confuse the model.
-D. Splitting every sentence into its own message.
+- A. Writing the entire prompt in capital letters for emphasis.
+- B. Separating each kind of content with clearly named XML-style tags such as `<instructions>`, `<context>`, and `<input>`.
+- C. Removing the examples, since examples always confuse the model.
+- D. Splitting every sentence into its own message.
 
 **Q6.** A team lead wants Claude to produce ticket summaries in the team's established house style, which is hard to describe in words. Which approach does official guidance most support? (Select ONE.)
 
-A. Provide 3–5 relevant, varied real examples of ticket-plus-ideal-summary pairs, wrapped in example tags, before the new ticket.
-B. Provide 25 examples so every possible case is covered.
-C. Describe the style using at least ten adjectives.
-D. Ask Claude to guess the style from the team's name.
+- A. Provide 3–5 relevant, varied real examples of ticket-plus-ideal-summary pairs, wrapped in example tags, before the new ticket.
+- B. Provide 25 examples so every possible case is covered.
+- C. Describe the style using at least ten adjectives.
+- D. Ask Claude to guess the style from the team's name.
 
 **Q7.** An associate needs ideas for reducing meeting load across a department. Her prompt — "What's the best way to reduce meetings?" — returns one conventional recommendation. Which change best adapts her prompting strategy to a brainstorming task? (Select ONE.)
 
-A. Ask the same question again with "think harder" appended.
-B. Ask for a single, definitive answer with citations for each claim.
-C. Ask for 15 distinct ideas varying from low-effort to structural changes, with evaluation deferred to a follow-up step.
-D. Switch the request to a formal report format.
+- A. Ask the same question again with "think harder" appended.
+- B. Ask for a single, definitive answer with citations for each claim.
+- C. Ask for 15 distinct ideas varying from low-effort to structural changes, with evaluation deferred to a follow-up step.
+- D. Switch the request to a formal report format.
 
 **Q8.** An associate is prompting Claude to answer questions about a lengthy uploaded policy document. According to Anthropic's long-context guidance, how should the prompt be arranged? (Select ONE.)
 
-A. Question first, then the document, so Claude knows what to look for.
-B. The document near the top of the prompt, with the question and instructions after it.
-C. The document split across many separate short messages.
-D. Only a paraphrase of the document, since full documents reduce quality.
+- A. Question first, then the document, so Claude knows what to look for.
+- B. The document near the top of the prompt, with the question and instructions after it.
+- C. The document split across many separate short messages.
+- D. Only a paraphrase of the document, since full documents reduce quality.
 
 ### Answers
 

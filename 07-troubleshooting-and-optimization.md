@@ -81,6 +81,7 @@ Walk through one failure end-to-end, the way an exam scenario unfolds.
 Use before writing (pre-flight) and after a disappointing output (post-mortem):
 
 **Pre-flight**
+
 - [ ] Have I stated the task simply and unambiguously?
 - [ ] Would a stranger with no background knowledge have everything needed to do this?
 - [ ] Have I specified the output format (structure, length, audience, tone) — ideally with an example?
@@ -88,6 +89,7 @@ Use before writing (pre-flight) and after a disappointing output (post-mortem):
 - [ ] Does the task depend on facts Claude may not have (recent events, internal data)? If so, have I supplied them?
 
 **Post-mortem**
+
 - [ ] What exactly is wrong — content, format, depth, accuracy, completeness? (Name it in one sentence.)
 - [ ] Which of the five cause families does it map to: instructions, context, task size, knowledge boundary, conversation state?
 - [ ] What is the *single* change most likely to fix it?
@@ -224,60 +226,60 @@ Budget-wise: at 10% weight this domain is worth roughly 6 of 60 items — enough
 
 **Q1.** An operations analyst asks Claude to "improve our onboarding doc" and receives generic advice that could apply to any company. What is the most appropriate next step?
 
-A. Switch to a more capable model and resend the identical prompt.
-B. Re-send the prompt with added context: the actual document, the audience, the specific problems to fix, and what a successful revision looks like.
-C. Ask Claude why its answer was generic.
-D. Report the response using the thumbs-down button and wait for improvements.
+- A. Switch to a more capable model and resend the identical prompt.
+- B. Re-send the prompt with added context: the actual document, the audience, the specific problems to fix, and what a successful revision looks like.
+- C. Ask Claude why its answer was generic.
+- D. Report the response using the thumbs-down button and wait for improvements.
 
 **Q2.** A marketer asks Claude for a competitor summary as "a table with columns for company, pricing, and key differentiator," but keeps receiving paragraphs of prose across several attempts. Which adjustment is most likely to resolve the formatting failure?
 
-A. Repeat the same prompt in a new conversation until the format appears.
-B. Ask for the output in a different file type.
-C. Restructure the prompt so the format specification is explicit and prominent, and include a small example of the desired table for Claude to follow.
-D. Shorten the prompt by removing the background context about the competitors.
+- A. Repeat the same prompt in a new conversation until the format appears.
+- B. Ask for the output in a different file type.
+- C. Restructure the prompt so the format specification is explicit and prominent, and include a small example of the desired table for Claude to follow.
+- D. Shorten the prompt by removing the background context about the competitors.
 
 **Q3.** Claude produces a market overview citing a named industry report with specific percentage figures. The user cannot find the report anywhere. What is the best interpretation and response?
 
-A. The report is probably paywalled; cite it anyway since Claude referenced it.
-B. The citation may be hallucinated; treat the figures as unverified, and re-run the task grounded in source documents the user provides, instructing Claude to use only those sources.
-C. Ask Claude to confirm the report exists; if it says yes, proceed.
-D. Ask Claude to regenerate the answer with more confident wording.
+- A. The report is probably paywalled; cite it anyway since Claude referenced it.
+- B. The citation may be hallucinated; treat the figures as unverified, and re-run the task grounded in source documents the user provides, instructing Claude to use only those sources.
+- C. Ask Claude to confirm the report exists; if it says yes, proceed.
+- D. Ask Claude to regenerate the answer with more confident wording.
 
 **Q4.** An associate's single prompt asks Claude to analyze survey data, draft an executive summary, propose three initiatives, and write a rollout email. The output addresses the analysis well but skims or skips the rest. What is the most appropriate fix?
 
-A. Add "make sure you complete every part" to the same prompt and resend.
-B. Break the request into sequential steps, feeding each step's output into the next.
-C. Move the email request to the beginning of the prompt.
-D. Ask for the output twice and merge the two responses.
+- A. Add "make sure you complete every part" to the same prompt and resend.
+- B. Break the request into sequential steps, feeding each step's output into the next.
+- C. Move the email request to the beginning of the prompt.
+- D. Ask for the output twice and merge the two responses.
 
 **Q5.** Deep into a very long conversation with many changed requirements, Claude begins reintroducing ideas the user rejected an hour earlier and mixing up current constraints. What is the most effective response?
 
-A. Scold the model within the thread and restate that the old ideas were rejected.
-B. Summarize the current, still-valid requirements and decisions, then start a fresh conversation seeded with that summary.
-C. Continue the thread but write in all caps for emphasis.
-D. Abandon the task, since degradation means the model cannot handle it.
+- A. Scold the model within the thread and restate that the old ideas were rejected.
+- B. Summarize the current, still-valid requirements and decisions, then start a fresh conversation seeded with that summary.
+- C. Continue the thread but write in all caps for emphasis.
+- D. Abandon the task, since degradation means the model cannot handle it.
 
 **Q6.** A support team uses Claude to draft replies to roughly 40 similar tickets per day. Each agent writes a new prompt from scratch each time, re-explaining the company's tone rules, and quality varies widely between agents. Which TWO changes best optimize this workflow? (Select TWO.)
 
-A. Store the tone rules and product context as persistent instructions in a shared Project instead of re-explaining them per chat.
-B. Require each agent to use the most capable, highest-cost model for every ticket.
-C. Standardize on a tested prompt template with slots for the ticket-specific details.
-D. Prohibit follow-up messages so agents accept the first draft as-is.
-E. Have each agent rate every response with thumbs-up to lock in quality.
+- A. Store the tone rules and product context as persistent instructions in a shared Project instead of re-explaining them per chat.
+- B. Require each agent to use the most capable, highest-cost model for every ticket.
+- C. Standardize on a tested prompt template with slots for the ticket-specific details.
+- D. Prohibit follow-up messages so agents accept the first draft as-is.
+- E. Have each agent rate every response with thumbs-up to lock in quality.
 
 **Q7.** An associate has refined a summarization prompt through several rounds of in-chat corrections, and the latest outputs are finally excellent. Tomorrow the same task must be done again on a new document. What should the associate do to benefit from today's iteration?
 
-A. Keep the long conversation open forever and append tomorrow's document to it.
-B. Nothing — Claude will remember the corrections in any new chat automatically.
-C. Consolidate the successful corrections into an updated reusable prompt (or Project instructions), so the next run starts from the improved version.
-D. Re-run tomorrow's task with the original first-draft prompt to keep results comparable.
+- A. Keep the long conversation open forever and append tomorrow's document to it.
+- B. Nothing — Claude will remember the corrections in any new chat automatically.
+- C. Consolidate the successful corrections into an updated reusable prompt (or Project instructions), so the next run starts from the improved version.
+- D. Re-run tomorrow's task with the original first-draft prompt to keep results comparable.
 
 **Q8.** Claude's outputs for a high-volume classification task are consistently accurate, but the workflow feels too slow and costly for such a simple task. Prompt tweaks haven't changed this. What does official guidance suggest is the appropriate lever?
 
-A. Keep prompt-engineering until latency improves.
-B. This is not a prompt-engineering problem; select a faster, lower-cost model suited to the straightforward task.
-C. Remove the accuracy checks to save time.
-D. Split every item into its own conversation to speed things up.
+- A. Keep prompt-engineering until latency improves.
+- B. This is not a prompt-engineering problem; select a faster, lower-cost model suited to the straightforward task.
+- C. Remove the accuracy checks to save time.
+- D. Split every item into its own conversation to speed things up.
 
 ### Answers
 

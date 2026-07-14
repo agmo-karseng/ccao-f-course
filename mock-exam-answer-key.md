@@ -8,6 +8,7 @@ nav_order: 11
 Companion to `mock-exam.md`. For each item: correct answer(s), domain, and a rationale in the style of the exam guide's Section 8 — why the credited response is right and why each distractor fails. Multiple-response items are scored all-or-nothing. A per-domain scoring worksheet follows the rationales.
 
 **Domain legend**
+
 - D1 — Prompting and Task Execution
 - D2 — Output Evaluation and Validation
 - D3 — Product and Model Selection

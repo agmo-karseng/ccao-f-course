@@ -271,75 +271,75 @@ Organizing information is also an evaluation act. Long research outputs typicall
 
 **Q1.** An associate asks Claude to draft a competitive analysis. The draft cites a specific market-share figure of "23.4%, per the 2025 Gartner industry report." The associate cannot find that report. What is the most appropriate next step?
 
-A. Include the figure, since its precision suggests it came from real data.
-B. Ask Claude to confirm whether the report exists and keep the figure if Claude says yes.
-C. Treat the figure as unverified, remove or replace it with a claim traceable to a source the associate can open, and note the change.
-D. Round the figure to "about 25%" so it reads as an estimate.
+- A. Include the figure, since its precision suggests it came from real data.
+- B. Ask Claude to confirm whether the report exists and keep the figure if Claude says yes.
+- C. Treat the figure as unverified, remove or replace it with a claim traceable to a source the associate can open, and note the change.
+- D. Round the figure to "about 25%" so it reads as an estimate.
 
 **Q2.** A finance associate uses Claude to summarize quarterly results for a leadership email. The summary states revenue grew 8% year over year; the source spreadsheet shows 8% growth *quarter over quarter* and 3% year over year. What kind of error is this, and what does it illustrate?
 
-A. A formatting inconsistency; it illustrates the need for output templates.
-B. A plausible-but-wrong claim; it illustrates why load-bearing numbers must be checked against the source data even when they look reasonable.
-C. A bias; it illustrates one-sided framing of financial results.
-D. A completeness gap; it illustrates that a section was omitted.
+- A. A formatting inconsistency; it illustrates the need for output templates.
+- B. A plausible-but-wrong claim; it illustrates why load-bearing numbers must be checked against the source data even when they look reasonable.
+- C. A bias; it illustrates one-sided framing of financial results.
+- D. A completeness gap; it illustrates that a section was omitted.
 
 **Q3. (Multiple response — select TWO.)** Which of the following observations in a Claude output are warning signs of possible hallucination that warrant external verification?
 
-A. A direct quotation attributed to a named executive that the associate has never seen elsewhere.
-B. The output uses headings and bullet points.
-C. A confident, detailed answer about an event that occurred after the model's training data was collected, produced without web search.
-D. The output is longer than the associate expected.
-E. The output admits uncertainty about a figure and recommends checking the source.
+- A. A direct quotation attributed to a named executive that the associate has never seen elsewhere.
+- B. The output uses headings and bullet points.
+- C. A confident, detailed answer about an event that occurred after the model's training data was collected, produced without web search.
+- D. The output is longer than the associate expected.
+- E. The output admits uncertainty about a figure and recommends checking the source.
 
 **Q4.** An associate reviews a 15-page Claude-drafted strategy document. The executive summary says the initiative will reduce costs by 12%; page 9 says 21%; the conclusion says "roughly 15%." What should the associate do first?
 
-A. Use the executive summary's figure, since summaries are written last.
-B. Average the three figures to smooth out the noise.
-C. Recognize the internal inconsistency, return to the underlying source analysis to determine the correct figure, and correct every instance in the document.
-D. Delete all three figures so the document contains no contradictions.
+- A. Use the executive summary's figure, since summaries are written last.
+- B. Average the three figures to smooth out the noise.
+- C. Recognize the internal inconsistency, return to the underlying source analysis to determine the correct figure, and correct every instance in the document.
+- D. Delete all three figures so the document contains no contradictions.
 
 **Q5.** A recruiter has Claude draft a job posting for a senior engineering role. The draft describes the ideal candidate as a "young, energetic digital native who can dominate a fast-paced boys'-club environment." What is the most appropriate evaluation of this output?
 
-A. The draft is acceptable because Claude generated it from a neutral prompt.
-B. The draft contains biased, potentially discriminatory language and must be revised — and hiring content of this kind should get human review before publication.
-C. The draft only needs a grammar pass, since bias is a legal question outside the associate's role.
-D. The draft should be published quickly and edited later if candidates complain.
+- A. The draft is acceptable because Claude generated it from a neutral prompt.
+- B. The draft contains biased, potentially discriminatory language and must be revised — and hiring content of this kind should get human review before publication.
+- C. The draft only needs a grammar pass, since bias is a legal question outside the associate's role.
+- D. The draft should be published quickly and edited later if candidates complain.
 
 **Q6.** Claude drafts revised indemnification language for a customer contract, and the associate has verified that the draft is internally consistent and matches the negotiation notes. Before the language goes into the contract, what is required?
 
-A. Nothing further; the associate's verification is sufficient.
-B. Review by qualified legal counsel, because contract language carries legal consequences beyond what output-level checks can validate.
-C. A second Claude conversation to review the first Claude's draft.
-D. Adding a footnote that the clause was AI-assisted.
+- A. Nothing further; the associate's verification is sufficient.
+- B. Review by qualified legal counsel, because contract language carries legal consequences beyond what output-level checks can validate.
+- C. A second Claude conversation to review the first Claude's draft.
+- D. Adding a footnote that the clause was AI-assisted.
 
 **Q7. (Multiple response — select THREE.)** Which of the following are validation or hallucination-reduction techniques consistent with Anthropic's published guidance?
 
-A. Explicitly allow Claude to say "I don't know" when it is uncertain.
-B. For long-document tasks, ask Claude to extract word-for-word quotes first and ground its answer in them.
-C. Ask Claude to rate its own confidence and accept any answer rated above 8/10.
-D. Have Claude cite a supporting quote or source for each claim, and retract claims it cannot support.
-E. Assume outputs are reliable once the same prompt has succeeded once before.
+- A. Explicitly allow Claude to say "I don't know" when it is uncertain.
+- B. For long-document tasks, ask Claude to extract word-for-word quotes first and ground its answer in them.
+- C. Ask Claude to rate its own confidence and accept any answer rated above 8/10.
+- D. Have Claude cite a supporting quote or source for each claim, and retract claims it cannot support.
+- E. Assume outputs are reliable once the same prompt has succeeded once before.
 
 **Q8.** An associate is producing a 10-page employee onboarding guide that HR will revise over several rounds and eventually distribute as a standalone document. Which output approach best fits?
 
-A. Keep the guide as inline chat responses and copy-paste pieces into email as needed.
-B. Work on the guide as an artifact, since it is substantial, self-contained content the team will iterate on, reuse, and refer back to.
-C. Request the guide as a JSON object for machine readability.
-D. Split the guide across ten separate conversations, one per page.
+- A. Keep the guide as inline chat responses and copy-paste pieces into email as needed.
+- B. Work on the guide as an artifact, since it is substantial, self-contained content the team will iterate on, reuse, and refer back to.
+- C. Request the guide as a JSON object for machine readability.
+- D. Split the guide across ten separate conversations, one per page.
 
 **Q9.** An associate has a validated, detailed technical analysis and must now brief the executive committee. Claude produces a one-page summary on request. What is the most important check before sending the summary?
 
-A. Confirm the summary uses more formal vocabulary than the original.
-B. Confirm the summary's facts and figures still match the validated analysis, since rewriting is a fresh generation that can silently alter details.
-C. Confirm the summary is exactly one page in every font size.
-D. No check is needed, because the underlying analysis was already validated.
+- A. Confirm the summary uses more formal vocabulary than the original.
+- B. Confirm the summary's facts and figures still match the validated analysis, since rewriting is a fresh generation that can silently alter details.
+- C. Confirm the summary is exactly one page in every font size.
+- D. No check is needed, because the underlying analysis was already validated.
 
 **Q10.** An associate asked Claude for a risk assessment covering five named business units. The response covers four units thoroughly and omits the fifth without comment. What is the best characterization and response?
 
-A. An accuracy failure; every statement in the output must be fact-checked again from scratch.
-B. A completeness failure; prompt Claude for the missing unit, then verify the full set covers the original request before use.
-C. A hallucination; the four sections should be discarded.
-D. Acceptable behavior; four of five is within normal tolerance for AI outputs.
+- A. An accuracy failure; every statement in the output must be fact-checked again from scratch.
+- B. A completeness failure; prompt Claude for the missing unit, then verify the full set covers the original request before use.
+- C. A hallucination; the four sections should be discarded.
+- D. Acceptable behavior; four of five is within normal tolerance for AI outputs.
 
 ---
 
